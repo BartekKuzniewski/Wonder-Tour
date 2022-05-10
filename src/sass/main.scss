@@ -17,12 +17,9 @@ html {
 // NAVIGATION
 
 .nav {
-	// display: flex;
-	// align-items: center;
-	// justify-content: center;
 	width: 100%;
 	border-bottom: 0.1em solid #d8d8d8;
-	
+
 	&__mobile {
 		display: flex;
 		justify-content: space-between;
@@ -40,11 +37,19 @@ html {
 			}
 		}
 
-		i {
+		&-btn {
 			font-size: 3rem;
 			padding: 0.5em;
-			color: $secondary-color;
+			background: none;
+			border: none;
 			cursor: pointer;
+			color: $secondary-color;
+
+			&:focus {
+				outline: none;
+				border: 1px solid $dark; //color to change
+				border-radius: 8px;
+			}
 		}
 
 		.container {

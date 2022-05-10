@@ -74,6 +74,7 @@ html {
 			}
 
 			&-socials {
+				text-align: center;
 				margin: 1em 3em;
 
 				&-item {
@@ -98,7 +99,7 @@ html {
 
 			&-item {
 				font-size: 1.8rem;
-				padding: 1em 6em 1.2em 1.5em;
+				padding: 1em 7em 1.2em 1.5em;
 				color: $dark;
 				text-decoration: none;
 				cursor: pointer;
@@ -119,7 +120,7 @@ html {
 			top: 6.5em;
 			padding: 2.5em;
 			transform: translateY(30%);
-			// visibility: hidden;
+			visibility: hidden;
 			transition: transform 0.5s, visibility 0.3s;
 	
 			&--active {

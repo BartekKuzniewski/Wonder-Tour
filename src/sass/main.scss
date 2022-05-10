@@ -24,6 +24,7 @@ html {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 		height: 6.5em;
 		width: 100%;
 
@@ -56,6 +57,52 @@ html {
 			display: flex;
 			align-items: center;
 			justify-content: center;
+		}
+
+		&-menu {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			top: 6.5em;
+			left: 0;
+			height: calc(100vh - 6.5em);
+
+			&-socials {
+				margin: 1em 3em;
+
+				&-item {
+					font-size: 1.8rem;
+					padding: 1em .5em;
+					color: $dark;
+					text-decoration: none;
+					transition: color 0.4s;
+					cursor: pointer;
+
+					&:hover {
+						color: $main-color;
+					}
+				}
+			}
+
+			&-items {
+				display: flex;
+				flex-direction: column;
+				border-top: .1em solid #d8d8d8;
+			}
+
+			&-item {
+				font-size: 1.8rem;
+				padding: 1em 6em 1.2em 1.5em;
+				color: $dark;
+				text-decoration: none;
+				cursor: pointer;
+				transition: background-color 0.5s, color 0.3s;
+
+				&:hover {
+					background-color: $main-color;
+					color: $white;
+				}
+			}
 		}
 	}
 }

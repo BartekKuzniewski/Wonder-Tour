@@ -66,6 +66,12 @@ html {
 			top: 6.5em;
 			left: 0;
 			height: calc(100vh - 6.5em);
+			transform: translateX(-350%);
+			transition: transform .5s;
+
+			&--active {
+				transform: translateX(0);
+			}
 
 			&-socials {
 				margin: 1em 3em;
@@ -100,6 +106,81 @@ html {
 
 				&:hover {
 					background-color: $main-color;
+					color: $white;
+				}
+			}
+		}
+
+		&-info {
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			right: 0;
+			top: 6.5em;
+			padding: 2.5em;
+			transform: translateY(30%);
+			// visibility: hidden;
+			transition: transform 0.5s, visibility 0.3s;
+	
+			&--active {
+				visibility: visible;
+				transform: translateY(0);
+			}
+			p {
+				font-size: 1.6rem;
+				margin-bottom: 1.5em;
+
+				span {
+					font-size: 1.8rem;
+				}
+	
+				i {
+					font-size: 1.8rem;
+					color: $main-color;
+					margin-right: 0.7em;
+				}
+			}
+	
+			&-free-quote-btn {
+				position: relative;
+				font-size: 1.6rem;
+				padding: 0.7em 1.7em;
+				background: none;
+				border: 0.15em solid $main-color;
+				cursor: pointer;
+				overflow: hidden;
+				transition: color 0.5s;
+	
+				&::after,
+				&::before {
+					display: block;
+					position: absolute;
+					content: '';
+					top: -10%;
+					width: 0%;
+					height: 130%;
+					background-color: $main-color;
+					z-index: -1;
+					transition: width 0.5s;
+				}
+	
+				&::before {
+					left: 50%;
+				}
+	
+				&::after {
+					right: 50%;
+				}
+	
+				&:hover::before {
+					width: 60%;
+				}
+	
+				&:hover::after {
+					width: 60%;
+				}
+	
+				&:hover {
 					color: $white;
 				}
 			}

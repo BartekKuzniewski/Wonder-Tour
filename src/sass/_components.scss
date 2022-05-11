@@ -1,5 +1,51 @@
+@use 'colors.scss' as *;
+
 .wrapper {
     width: 100%;
     max-width: 120em;
     margin: 0 auto;
+}
+
+.free-quote-btn {
+    position: relative;
+    font-size: 1.6rem;
+    padding: 0.7em 1.7em;
+    background: none;
+    border: 0.15em solid $main-color;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.5s;
+
+    &::after,
+    &::before {
+        display: block;
+        position: absolute;
+        content: '';
+        top: -10%;
+        width: 0%;
+        height: 130%;
+        background-color: $main-color;
+        z-index: -1;
+        transition: width 0.5s;
+    }
+
+    &::before {
+        left: 50%;
+    }
+
+    &::after {
+        right: 50%;
+    }
+
+    &:hover::before {
+        width: 60%;
+    }
+
+    &:hover::after {
+        width: 60%;
+    }
+
+    &:hover {
+        color: $white;
+    }
 }

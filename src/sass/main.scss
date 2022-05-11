@@ -162,60 +162,23 @@ html {
 					margin-right: 0.7em;
 				}
 			}
-
-			&-free-quote-btn {
-				position: relative;
-				font-size: 1.6rem;
-				padding: 0.7em 1.7em;
-				background: none;
-				border: 0.15em solid $main-color;
-				cursor: pointer;
-				overflow: hidden;
-				transition: color 0.5s;
-
-				&::after,
-				&::before {
-					display: block;
-					position: absolute;
-					content: '';
-					top: -10%;
-					width: 0%;
-					height: 130%;
-					background-color: $main-color;
-					z-index: -1;
-					transition: width 0.5s;
-				}
-
-				&::before {
-					left: 50%;
-				}
-
-				&::after {
-					right: 50%;
-				}
-
-				&:hover::before {
-					width: 60%;
-				}
-
-				&:hover::after {
-					width: 60%;
-				}
-
-				&:hover {
-					color: $white;
-				}
-			}
 		}
 	}
 
 	&__desktop {
+		width: 100%;
 		display: none;
+
+		.wrapper {
+			width: 100%;
+		}
+
 		&-head {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
 			padding: 3em 1em;
+			margin: 0 1em;
 
 			.logo {
 				font-size: 2.6rem;
@@ -230,7 +193,7 @@ html {
 				justify-content: center;
 
 				&-time {
-					border-right: .1em solid #d8d8d8;
+					border-right: 0.1em solid #d8d8d8;
 				}
 
 				p {
@@ -251,10 +214,42 @@ html {
 		}
 
 		&-menu {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
+			background-color: $secondary-color;
+			padding: 1em;
+
+			.wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+			&-items {
+				margin: 1em;
+			}
+
+			&-item {
+				font-size: 2rem;
+				padding: 1em;
+				color: $white;
+				text-decoration: none;
+				cursor: pointer;
+			}
+
+			&-socials {
+				&-item {
+					font-size: 2rem;
+					padding: 1em 0.5em;
+					color: $white;
+					text-decoration: none;
+					transition: color 0.4s;
+					cursor: pointer;
+
+					&:hover {
+						color: $main-color;
+					}
+				}
+			}
 		}
+
 	}
 }
 

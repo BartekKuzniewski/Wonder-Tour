@@ -1,4 +1,5 @@
 @use 'colors.scss' as *;
+@use 'components.scss' as *;
 
 *,
 *::before,
@@ -29,7 +30,7 @@ html {
 		width: 100%;
 
 		&-logo {
-			a {
+			.logo {
 				font-size: 2.2rem;
 				padding: 0.5em;
 				color: $secondary-color;
@@ -146,6 +147,7 @@ html {
 				visibility: visible;
 				transform: translateY(0);
 			}
+
 			p {
 				font-size: 1.6rem;
 				margin-bottom: 1.5em;
@@ -208,16 +210,50 @@ html {
 	}
 
 	&__desktop {
+		display: none;
 		&-head {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			padding: 3em 1em;
+
+			.logo {
+				font-size: 2.6rem;
+				color: $secondary-color;
+				font-weight: 700;
+				text-decoration: none;
+			}
 
 			&-info {
 				display: flex;
 				align-items: center;
 				justify-content: center;
+
+				&-time {
+					border-right: .1em solid #d8d8d8;
+				}
+
+				p {
+					font-size: 1.6rem;
+					margin: 0 2em;
+
+					span {
+						font-size: 1.8rem;
+					}
+
+					i {
+						font-size: 1.8rem;
+						color: $main-color;
+						margin-right: 0.7em;
+					}
+				}
 			}
+		}
+
+		&-menu {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 		}
 	}
 }

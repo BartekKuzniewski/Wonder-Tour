@@ -321,13 +321,19 @@ html {
 		max-width: 36em;
 		padding: 1em 3em;
 
-		img {
-			height: 36em;
-			width: 100%;
-		}
-
 		&-img {
 			position: relative;
+			overflow: hidden;
+			
+			img {
+				height: 36em;
+				width: 100%;
+				transition: transform .3s;
+
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
 		}
 
 		&-tittle {
@@ -337,8 +343,8 @@ html {
 			text-align: center;
 			transform: translateX(-50%);
 			color: $white;
-			font-size: 2.5rem;
-			letter-spacing: .05em;
+			font-size: 2.6rem;
+			letter-spacing: 0.05em;
 		}
 	}
 }
@@ -366,6 +372,20 @@ html {
 			}
 		}
 	}
+
+	.tours {
+		&__cards {
+			flex-direction: row;
+		}
+
+		&__card {
+			padding: 1em;
+
+			img {
+				height: 28em;
+			}
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -383,7 +403,7 @@ html {
 		background-image: url('../img/header-bg-large.jpg');
 
 		&__info {
-			height: 65vh;
+			height: 70vh;
 
 			&-tittle {
 				font-size: 6.5rem;
@@ -391,6 +411,22 @@ html {
 
 			&-btn {
 				margin-top: 1em;
+			}
+		}
+	}
+
+	.tours {
+		&__cards {
+			width: 100%;
+			margin-top: -12em;
+		}
+		&__card {
+			max-width: 38em;
+			margin-right: 1em;
+			padding: 1em;
+
+			img {
+				height: 44em;
 			}
 		}
 	}

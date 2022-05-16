@@ -74,11 +74,12 @@
     color: $dark;
     border: 0.12em solid $dark;
     cursor: pointer;
-    transition: background-color 0.4s, border 0.4s;
+    transition: background-color 0.4s, border 0.4s, color .4s;
 
     &:hover {
         background-color: $main-color;
         border: .12em solid $main-color;
+        color: $white;
     }
 }
 

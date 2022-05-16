@@ -49,6 +49,39 @@
     }
 }
 
+.first-btn {
+    font-size: 1.8rem;
+    padding: 1em 2em;
+    background-color: $main-color;
+    color: $white;
+    border: .12em solid $main-color;
+    cursor: pointer;
+    margin-bottom: 1em;
+    transition: color 0.3s ease-in-out, border 0.3s ease-in-out,
+        background-color 0.3s ease-in-out;
+
+    &:hover {
+        background-color: transparent;
+        color: $dark;
+        border: 0.12em solid $dark;
+    }
+}
+
+.second-btn {
+    font-size: 1.8rem;
+    padding: 1em 2em;
+    background-color: $white;
+    color: $dark;
+    border: 0.12em solid $dark;
+    cursor: pointer;
+    transition: background-color 0.4s, border 0.4s;
+
+    &:hover {
+        background-color: $main-color;
+        border: .12em solid $main-color;
+    }
+}
+
 .section-padding {
     padding: 6em 2em;
 }

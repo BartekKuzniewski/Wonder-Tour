@@ -504,7 +504,50 @@ html {
 					font-size: 1.5rem;
 					margin: 1em 0;
 					line-height: 1.6em;
-					opacity: .8;
+					opacity: 0.8;
+				}
+
+				.buttons {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+
+					.first-btn {
+						position: relative;
+						font-size: 1.8rem;
+						padding: 1em 2em;
+						background-color: $main-color;
+						color: $white;
+						border: none;
+						cursor: pointer;
+						overflow: hidden;
+						margin-bottom: 1em;
+						transition: color 0.3s ease-in-out, border .3s ease-in-out, background-color .3s ease-in-out;
+
+						&:hover {
+							background-color: transparent;
+							color: $dark;
+							border: .12em solid $dark;
+						}
+					}
+
+					.second-btn {
+						position: relative;
+						font-size: 1.8rem;
+						padding: 1em 2em;
+						background-color: $white;
+						color: $dark;
+						border: .12em solid $dark;
+						cursor: pointer;
+						overflow: hidden;
+						transition: background-color .4s, border .4s;
+
+						&:hover {
+							background-color: $main-color;
+							border: none;
+						}
+					}
 				}
 			}
 		}

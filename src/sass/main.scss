@@ -464,6 +464,7 @@ html {
 				align-items: center;
 				justify-content: center;
 				flex-wrap: wrap;
+				padding: 0 4em;
 
 				.about-items {
 					list-style: none;
@@ -478,6 +479,7 @@ html {
 					padding: 0.5em 1em;
 					margin-bottom: 0.5em;
 					color: $gray;
+					letter-spacing: 0.15em;
 					cursor: pointer;
 					transition: color 0.3s;
 
@@ -514,38 +516,35 @@ html {
 					justify-content: center;
 
 					.first-btn {
-						position: relative;
 						font-size: 1.8rem;
 						padding: 1em 2em;
 						background-color: $main-color;
 						color: $white;
-						border: none;
+						border: .12em solid $main-color;
 						cursor: pointer;
-						overflow: hidden;
 						margin-bottom: 1em;
-						transition: color 0.3s ease-in-out, border .3s ease-in-out, background-color .3s ease-in-out;
+						transition: color 0.3s ease-in-out, border 0.3s ease-in-out,
+							background-color 0.3s ease-in-out;
 
 						&:hover {
 							background-color: transparent;
 							color: $dark;
-							border: .12em solid $dark;
+							border: 0.12em solid $dark;
 						}
 					}
 
 					.second-btn {
-						position: relative;
 						font-size: 1.8rem;
 						padding: 1em 2em;
 						background-color: $white;
 						color: $dark;
-						border: .12em solid $dark;
+						border: 0.12em solid $dark;
 						cursor: pointer;
-						overflow: hidden;
-						transition: background-color .4s, border .4s;
+						transition: background-color 0.4s, border 0.4s;
 
 						&:hover {
 							background-color: $main-color;
-							border: none;
+							border: .12em solid $main-color;
 						}
 					}
 				}
@@ -564,6 +563,47 @@ html {
 
 			&-tittle {
 				font-size: 5rem;
+			}
+		}
+	}
+
+	.about {
+		&__img {
+			margin-bottom: 4em;
+		}
+		&__info {
+			&-heading {
+				h2 {
+					font-size: 3rem;
+				}
+			}
+
+			&-content {
+				&-headings {
+					padding: 0em 8em;
+
+					.about-item {
+						font-size: 2rem;
+					}
+				}
+				&-text {
+					p {
+						font-size: 1.6rem;
+						margin-bottom: 2em;
+						padding: 0 2em;
+						line-height: 1.6em;
+						opacity: 0.8;
+					}
+
+					.buttons {
+						flex-direction: row;
+
+						.first-btn {
+							margin-bottom: 0;
+							margin-right: 2em;
+						}
+					}
+				}
 			}
 		}
 	}

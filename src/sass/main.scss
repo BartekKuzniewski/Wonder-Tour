@@ -569,10 +569,6 @@ html {
 			&-content {
 				&-headings {
 					padding: 0em 8em;
-
-					.about-item {
-						font-size: 1.8rem;
-					}
 				}
 				&-text {
 					p {
@@ -644,7 +640,6 @@ html {
 
 						// margin-bottom: 0;
 						border-top: none;
-						
 
 						&:hover {
 							border-bottom: 0.1em solid $main-color;
@@ -706,6 +701,47 @@ html {
 
 			img {
 				height: 44em;
+			}
+		}
+	}
+
+	.about {
+		&__content {
+			flex-direction: row;
+		}
+
+		&__img {
+			margin: 0;
+			flex: 1;
+		}
+
+		&__info {
+			padding: 1em 5em;
+			flex: 1;
+
+			&-heading {
+				text-align: center;
+			}
+
+			&-content {
+				&-headings {
+					.about-items {
+						justify-content: center;
+					}
+					.about-item {
+						padding: .5em 1em;
+					}
+				}
+
+				&-text {
+					p {
+						text-align: center;
+					}
+				}
+
+				.buttons {
+					justify-content: center;
+				}
 			}
 		}
 	}

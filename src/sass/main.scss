@@ -507,17 +507,6 @@ html {
 					&:hover {
 						color: $main-color;
 					}
-
-					// &::after {
-					// 	content: '';
-					// 	position: absolute;
-					// 	width: 102%;
-					// 	height: 103%;
-					// 	top: 0;
-					// 	left: 0;
-					// 	border-top: 0.15em solid #e1e1e1;
-					// 	border-bottom: 0.15em solid #e1e1e1;
-					// }
 				}
 			}
 
@@ -716,7 +705,7 @@ html {
 		}
 
 		&__info {
-			padding: 1em 5em;
+			padding: 1em 2em;
 			flex: 1;
 
 			&-heading {
@@ -729,6 +718,8 @@ html {
 						justify-content: center;
 					}
 					.about-item {
+						font-size: 1.6rem;
+						letter-spacing: normal;
 						padding: .5em 1em;
 					}
 				}
@@ -741,6 +732,19 @@ html {
 
 				.buttons {
 					justify-content: center;
+				}
+			}
+		}
+	}
+}
+
+@media(min-width:1200px) {
+	.about {
+		&__info-content {
+			&-headings {
+				.about-item {
+					font-size: 1.8rem;
+					letter-spacing: 0.1em;
 				}
 			}
 		}

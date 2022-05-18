@@ -36,9 +36,10 @@ aboutUs.addEventListener('click', () => {
 	aboutUs.classList.add('about-item--about--active');
 	chooseUs.classList.remove('about-item--choose-us--active');
 	mission.classList.remove('about-item--mission--active');
+
     firstInfo.classList.add('about__info-content-text--first--active');
     secondInfo.classList.remove('about__info-content-text--second--active');
-    thirdInfo.classList.remove('about__info-content-text--second--active');
+    thirdInfo.classList.remove('about__info-content-text--third--active');
 
 });
 

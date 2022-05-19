@@ -47,6 +47,7 @@ chooseUs.addEventListener('click', () => {
 	aboutUs.classList.remove('about-item--about--active');
 	chooseUs.classList.add('about-item--choose-us--active');
 	mission.classList.remove('about-item--mission--active');
+
     firstInfo.classList.remove('about__info-content-text--first--active');
     secondInfo.classList.add('about__info-content-text--second--active');
     thirdInfo.classList.remove('about__info-content-text--third--active');
@@ -56,6 +57,7 @@ mission.addEventListener('click', () => {
 	aboutUs.classList.remove('about-item--about--active');
 	chooseUs.classList.remove('about-item--choose-us--active');
 	mission.classList.add('about-item--mission--active');
+    
     firstInfo.classList.remove('about__info-content-text--first--active');
     secondInfo.classList.remove('about__info-content-text--second--active');
     thirdInfo.classList.add('about__info-content-text--third--active');

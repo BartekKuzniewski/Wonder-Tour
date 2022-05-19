@@ -580,16 +580,16 @@ html {
 	}
 
 	&__card {
-		padding: 3em;
+		padding: 3em 1.5em;
 		margin-bottom: 2em;
 		max-width: 28em;
 		text-align: center;
-		border: .5em solid $light-gray;
+		border: 0.5em solid $light-gray;
 
 		&-icon {
 			font-size: 3rem;
 			color: $main-color;
-			margin-bottom: .5em;
+			margin-bottom: 0.5em;
 		}
 
 		&-tittle {
@@ -599,12 +599,11 @@ html {
 		}
 
 		&-text {
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 			line-height: 1.7em;
 			color: $gray;
-			opacity: .7;	
+			opacity: 0.7;
 		}
-
 	}
 }
 // MEDIA
@@ -829,21 +828,30 @@ html {
 		}
 	}
 	.services {
-
+		&__cards {
+			gap: 3.5em;
+		}
 		&__card {
+			padding: 3em 3em;
 			max-width: 35em;
+			transition: border 0.3s, box-shadow 0.3s;
+
+			&:hover {
+				box-shadow: 0 0 10px 0 rgb(0 0 0 / 17%);
+				border: 0.01em solid $light-gray;
+			}
 
 			&-icon {
 				font-size: 3.4rem;
 			}
-	
+
 			&-tittle {
 				font-size: 2.2rem;
 			}
-	
+
 			&-text {
 				font-size: 1.7rem;
-				line-height: 1.7em;	
+				line-height: 1.7em;
 			}
 		}
 	}

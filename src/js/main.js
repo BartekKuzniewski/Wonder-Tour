@@ -3,6 +3,7 @@ const barsIcon = document.querySelector('.fa-bars');
 const arrowIcon = document.querySelector('.fa-arrow-left');
 const infoBtn = document.querySelector('.info-btn');
 const mobileNav = document.querySelector('.nav__mobile-menu');
+const desktopNav = document.querySelector('.nav__desktop-menu');
 const infoNav = document.querySelector('.nav__mobile-info');
 const mobileNavItems = document.querySelectorAll('.nav__mobile-menu-items');
 //about-us
@@ -33,10 +34,37 @@ infoBtn.addEventListener('click', () => {
 
 mobileNavItems.forEach((item) => {
 	item.addEventListener('click', () => {
-		mobileNav.classList.remove('nav__mobile-menu--active')
+		mobileNav.classList.remove('nav__mobile-menu--active');
+		barsIcon.classList.toggle('hide');
+		arrowIcon.classList.toggle('hide');
 	});
 });
 
+const addNavPosition = () => {
+	const navPosition = desktopNav.offsetTop;
+	const currentPosition = window.scrollY;
+	console.log(navPosition);
+	console.log(currentPosition);
+
+	if (currentPosition >= navPosition + 10) {
+		desktopNav.classList.add('nav-position');
+	}
+};
+
+const removeNavPosition = () => {
+	const navPosition = desktopNav.offsetTop;
+	const currentPosition = window.scrollY;
+	console.log(navPosition);
+	console.log(currentPosition);
+
+	if (currentPosition < 61) {
+		desktopNav.classList.remove('nav-position');
+	}
+}
+
+
+window.addEventListener('scroll', addNavPosition);
+window.addEventListener('scroll', removeNavPosition);
 //about-us
 
 aboutUs.addEventListener('click', () => {

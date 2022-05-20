@@ -15,6 +15,11 @@ html {
 	font-family: 'Montserrat', sans-serif;
 }
 
+.nav-position {
+	position: fixed;
+	top: 0;
+}
+
 // NAVIGATION
 
 .nav {
@@ -218,8 +223,7 @@ html {
 		}
 
 		&-menu {
-			// position: fixed;
-			// top: 0; add with JS
+			z-index: 1000;
 			width: 100%;
 			background-color: $secondary-color;
 

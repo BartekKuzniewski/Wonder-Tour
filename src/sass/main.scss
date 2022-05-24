@@ -697,6 +697,7 @@ html {
 // HERO-IMG
 .hero-img {
 	position: relative;
+	padding: 6em 2em;
 	background-image: url('../img/hero-img.jpg');
 	background-position: 45% 1%;
 	background-attachment: fixed;
@@ -715,24 +716,24 @@ html {
 	}
 
 	&__tittle {
-		font-size: 3rem;
+		font-size: 2.6rem;
 		line-height: 1.5em;
 		font-weight: normal;
 		color: $white;
 
 		span {
-			font-size: 3.4rem;
+			font-size: 3rem;
 			font-weight: 700;
 		}
 	}
 
 	&__text {
+		margin-top: 1.5em;
+		margin-bottom: 4em;
 		font-size: 1.6rem;
 		line-height: 1.6em;
 		color: $white;
 		letter-spacing: .1em;
-		margin-top: 1.5em;
-		margin-bottom: 4em;
 	}
 
 	.first-btn {
@@ -804,6 +805,10 @@ html {
 			flex-direction: row;
 			gap: 2em;
 		}
+	}
+
+	.hero-img {
+		padding: 6em 4em;
 	}
 }
 
@@ -1066,6 +1071,22 @@ html {
 			}
 		}
 	}
+
+	.hero-img {
+		padding: 6em 12em;
+
+		&__tittle {
+			font-size: 4rem;
+
+			span {
+				font-size: 4.4rem;
+			}
+		}
+
+		&__text {
+			font-size: 1.8rem;
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -1096,5 +1117,9 @@ html {
 				padding-right: 10em;
 			}
 		}
+	}
+
+	.hero-img {
+		padding: 6em 30em;
 	}
 }

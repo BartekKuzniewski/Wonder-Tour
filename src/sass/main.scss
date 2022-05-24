@@ -693,6 +693,52 @@ html {
 		}
 	}
 }
+
+// HERO-IMG
+.hero-img {
+	position: relative;
+	background-image: url('../img/hero-img.jpg');
+	background-position: 45% 1%;
+	background-attachment: fixed;
+	text-align: center;
+	z-index: 0;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0,0,0,.5);
+		z-index: -1;
+		content: "";
+	}
+
+	&__tittle {
+		font-size: 3rem;
+		line-height: 1.5em;
+		font-weight: normal;
+		color: $white;
+
+		span {
+			font-size: 3.4rem;
+			font-weight: 700;
+		}
+	}
+
+	&__text {
+		font-size: 1.6rem;
+		line-height: 1.6em;
+		color: $white;
+		letter-spacing: .1em;
+		margin-top: 1.5em;
+		margin-bottom: 4em;
+	}
+
+	.first-btn {
+		text-decoration: none;
+	}
+}
 // MEDIA
 
 @media (min-width: 576px) {
@@ -871,6 +917,8 @@ html {
 			}
 		}
 	}
+
+	
 }
 
 @media (min-width: 992px) {

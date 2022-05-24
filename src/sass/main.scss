@@ -688,7 +688,7 @@ html {
 				font-size: 1.5rem;
 				line-height: 1.7em;
 				opacity: 0.7;
-				margin-bottom: 1em;
+				margin: 1.2em 0;
 			}
 		}
 	}
@@ -749,6 +749,13 @@ html {
 		&__cards {
 			flex-direction: row;
 			flex-wrap: wrap;
+			gap: 2em;
+		}
+	}
+
+	.hot-tours {
+		&__cards {
+			flex-direction: row;
 			gap: 2em;
 		}
 	}
@@ -825,6 +832,43 @@ html {
 	.services {
 		&__card {
 			max-width: 31em;
+		}
+	}
+
+	.hot-tours {
+		&__cards {
+			padding: 0em 2em;
+			flex-direction: column;
+		}
+
+		&__card {
+			display: flex;
+			flex-direction: row;
+			border: .2em solid $light-gray;
+
+			&-price {	
+				padding: 1.2em 1.7em;
+
+				.price {
+					font-size: 2rem;
+				}
+			}
+
+			&-img {
+				flex: 1;
+				img {
+					height: 100%;
+				}
+			}
+
+			&-info {
+				padding: 3em;
+				flex: 1;
+
+				&-place {
+					margin-top: 0;
+				}
+			}
 		}
 	}
 }
@@ -942,6 +986,38 @@ html {
 			}
 		}
 	}
+
+	.hot-tours {
+		&__card {
+			&-price {	
+				padding: 1.5em 2em;
+
+				.price {
+					font-size: 2.2rem;
+				}
+			}
+			&-info {
+				padding: 3em 5em 3em 4em;
+
+				&-place {
+					font-size: 2.4rem;
+				}
+				&-reviews {
+					i {
+						font-size: 1.7rem;
+					}
+
+					p {
+						font-size: 1.6rem;
+					}
+				}
+
+				&-text {
+					font-size: 1.7rem;
+				}
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {
@@ -963,6 +1039,14 @@ html {
 
 		&__card {
 			max-width: 36em;
+		}
+	}
+
+	.hot-tours {
+		&__card {
+			&-info {
+				padding-right: 10em;
+			}
 		}
 	}
 }

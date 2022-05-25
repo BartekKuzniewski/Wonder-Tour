@@ -710,9 +710,9 @@ html {
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0,0,0,.5);
+		background-color: rgba(0, 0, 0, 0.5);
 		z-index: -1;
-		content: "";
+		content: '';
 	}
 
 	&__tittle {
@@ -733,11 +733,54 @@ html {
 		font-size: 1.6rem;
 		line-height: 1.6em;
 		color: $white;
-		letter-spacing: .1em;
+		letter-spacing: 0.1em;
 	}
 
 	.first-btn {
 		text-decoration: none;
+	}
+}
+
+//REVIEWS
+.reviews {
+	background-color: $light-gray;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__box {
+		background-color: $white;
+		margin: 5em 0 6em 0;
+		text-align: center;
+		padding: 1em 2em;
+		filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.15));
+
+		&-figure {
+			margin-top: -5em;
+			margin-bottom: 1em;
+			
+			img {
+				border-radius: 50%;
+				border: 1.5em solid $white;
+			}
+		}
+
+		&-text {
+			font-size: 1.4rem;
+			color: $dark;
+			line-height: 1.6em;
+			margin-bottom: 1em;
+			letter-spacing: .025em;
+		}
+
+		&-name {
+			font-size: 1.8rem;
+			margin-bottom: .8em;
+			font-weight: normal;
+			color: $main-color;
+		}
 	}
 }
 // MEDIA
@@ -895,9 +938,9 @@ html {
 		&__card {
 			display: flex;
 			flex-direction: row;
-			border: .2em solid $light-gray;
+			border: 0.2em solid $light-gray;
 
-			&-price {	
+			&-price {
 				padding: 1.2em 1.7em;
 
 				.price {
@@ -922,8 +965,6 @@ html {
 			}
 		}
 	}
-
-	
 }
 
 @media (min-width: 992px) {
@@ -1042,7 +1083,7 @@ html {
 
 	.hot-tours {
 		&__card {
-			&-price {	
+			&-price {
 				padding: 1.5em 2em;
 
 				.price {

@@ -799,8 +799,9 @@ html {
 	&__card {
 		position: relative;
 		padding: 0 2em;
-		width: 250px;
-		height: 250px;
+		width: 100%;
+		max-width: 340px;
+		height: 270px;
 		background-image: url('../img/achievement-img.jpg');
 		margin-bottom: 4em;
 
@@ -905,6 +906,19 @@ html {
 	.reviews {
 		&__container {
 			padding: 0 6em;
+		}
+	}
+
+	.achievements {
+		&__card {
+			&-content {
+				&-number {
+					font-size: 5.2rem;
+				}
+				&-text {
+					font-size: 2.6rem;
+				}
+			}
 		}
 	}
 }
@@ -1036,6 +1050,18 @@ html {
 				font-size: 1.6rem;
 				margin-bottom: 1.5em;
 			}
+		}
+	}
+
+	.achievements {
+		&__cards {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 3em;
+		}
+
+		&__card {
+			margin-bottom:0;
 		}
 	}
 }

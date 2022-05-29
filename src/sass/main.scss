@@ -888,7 +888,7 @@ html {
 				background: rgba(255, 255, 255, 0.34);
 				border-color: transparent;
 				margin-bottom: 1em;
-				
+
 				&::placeholder {
 					color: $white;
 				}
@@ -899,6 +899,50 @@ html {
 				margin-bottom: 0;
 			}
 		}
+	}
+}
+
+// CONTACT
+.contact {
+	background-color: $secondary-color;
+	color: $white;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__info {
+		&-heading {
+			text-align: center;
+			font-size: 2.4rem;
+			margin-bottom: 1em;
+		}
+		&-box {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			padding: 1em 3em;
+			font-size: 1.6rem;
+
+			.position {
+				display: flex;
+				justify-content: center;
+			}
+
+
+			p {
+				margin-bottom: 1em;
+			}
+
+			i {
+				margin-right: 2em;
+			}
+		}
+
 	}
 }
 
@@ -1338,10 +1382,6 @@ html {
 				padding: 0em 8em;
 			}
 		}
-	}
-
-	.contact {
-		background-color: $secondary-color;
 	}
 }
 

@@ -917,7 +917,8 @@ html {
 	&__info {
 		&-heading {
 			text-align: center;
-			font-size: 2.4rem;
+			font-size: 2rem;
+			letter-spacing: .01em;
 			margin-bottom: 1em;
 		}
 		&-box {
@@ -926,20 +927,28 @@ html {
 			align-items: flex-start;
 			justify-content: center;
 			padding: 1em 3em;
-			font-size: 1.6rem;
-
+			
 			.position {
 				display: flex;
 				justify-content: center;
 			}
-
-
+			
+			
 			p {
-				margin-bottom: 1em;
+				font-size: 1.4rem;
+				margin-bottom: 1.4em;
+				transition: color .3s;
+				cursor: pointer;
+
+				&:hover {
+					color: $main-color;
+				}
 			}
 
 			i {
-				margin-right: 2em;
+				font-size: 2rem;
+				color: $main-color;
+				margin-right: 1.7em;
 			}
 		}
 

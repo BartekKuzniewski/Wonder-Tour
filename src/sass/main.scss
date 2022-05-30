@@ -921,7 +921,9 @@ html {
 		letter-spacing: 0.01em;
 		margin-bottom: 1em;
 	}
+
 	&__info {
+		width: 100%;
 		margin-bottom: 2em;
 
 		&-box {
@@ -956,6 +958,10 @@ html {
 	}
 
 	&__socials {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		width: 100%;
 		margin-bottom: 2em;
 
@@ -963,7 +969,6 @@ html {
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			justify-content: center;
 			padding: 1em 3em;
 			width: 100%;
 		}
@@ -984,6 +989,52 @@ html {
 			i {
 				font-size: 2rem;
 				margin-right: 1.8em;
+				color: $main-color;
+			}
+		}
+	}
+
+	&__links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+
+		ul {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 1em;
+			flex-wrap: wrap;
+			list-style: none;
+			margin-bottom: 2em;
+
+			li {
+				position: relative;
+				margin-bottom: 1em;
+				// padding: 1em;
+				&::before {
+					position: absolute;
+					content: '';
+					width: 0.7em;
+					height: 0.7em;
+					border-radius: 50%;
+					top: 0.6em;
+					left: -0.6 em;
+					background-color: $main-color;
+				}
+			}
+		}
+
+		&-item {
+			position: relative;
+			padding: 0em 1em;
+			font-size: 1.5rem;
+			color: $white;
+			text-decoration: none;
+			transition: color .3s;
+
+			&:hover {
 				color: $main-color;
 			}
 		}

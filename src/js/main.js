@@ -13,6 +13,8 @@ const mission = document.querySelector('.about-item--mission');
 const firstInfo = document.querySelector('.about__info-content-text--first');
 const secondInfo = document.querySelector('.about__info-content-text--second');
 const thirdInfo = document.querySelector('.about__info-content-text--third');
+// footer
+const footerYear = document.querySelector('.footer__year');
 
 burgerBtn.addEventListener('click', () => {
 	barsIcon.classList.toggle('hide');
@@ -62,7 +64,6 @@ const removeNavPosition = () => {
 	}
 }
 
-
 window.addEventListener('scroll', addNavPosition);
 window.addEventListener('scroll', removeNavPosition);
 //about-us
@@ -96,3 +97,11 @@ mission.addEventListener('click', () => {
 	secondInfo.classList.remove('about__info-content-text--second--active');
 	thirdInfo.classList.add('about__info-content-text--third--active');
 });
+
+//footer 
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear();
+	footerYear.innerText = year;
+};
+
+handleCurrentYear();

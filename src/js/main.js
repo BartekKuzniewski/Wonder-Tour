@@ -14,29 +14,48 @@ function handleNav() {
 	const navMobile = document.querySelector('.nav__mobile-menu');
 	const navInfo = document.querySelector('.nav__mobile-info');
 	const navInfoBtn = document.querySelector('.info-btn');
-	
-	function toggleNavMenu() {
+	const allNavItems = document.querySelectorAll('.nav__mobile-menu-items');
+
+	function toggleIcons() {
 		navIcon.classList.toggle('fa-bars');
 		navIcon.classList.toggle('fa-arrow-left');
+	}
+
+	function burgerAnimation() {
+		burgerBtn.classList.add('nav-btn-animation');
+		setTimeout(() => {
+			burgerBtn.classList.remove('nav-btn-animation');
+		}, 400);
+	}
+	function toggleNavMenu() {
+
+		toggleIcons();
 
 		if (navInfo.classList.contains('nav__mobile-info--active')) {
 			navInfo.classList.remove('nav__mobile-info--active');
 		}
 
 		navMobile.classList.toggle('nav__mobile-menu--active');
-		burgerBtn.classList.add('nav-btn-animation');
-		setTimeout(() => {
-			burgerBtn.classList.remove('nav-btn-animation');
-		}, 400);
+
+		burgerAnimation();
+
+		allNavItems.forEach((item) => {
+			item.addEventListener('click', () => {
+				navMobile.classList.remove('nav__mobile-menu--active');
+				navIcon.classList.remove('fa-arrow-left');
+				navIcon.classList.add('fa-bars');
+				burgerAnimation();
+			});
+		});
 	}
 
 	function toggleNavInfo() {
 		if (navMobile.classList.contains('nav__mobile-menu--active')) {
 			navMobile.classList.remove('nav__mobile-menu--active');
-			navIcon.classList.toggle('fa-bars');
-			navIcon.classList.toggle('fa-arrow-left');
+			toggleIcons();
 		}
 		navInfo.classList.toggle('nav__mobile-info--active');
+		navInfo.classList.add('nav-info-animation')
 	}
 
 	burgerBtn.addEventListener('click', toggleNavMenu);

@@ -38,10 +38,14 @@ html {
 	}
 }
 
+
+.nav-btn-animation {
+	animation: nav-btn-animation 0.4s;
+}
+
 // NAVIGATION
 
 .nav {
-	// position: fixed;
 	z-index: 100;
 	width: 100%;
 	background-color: $white;
@@ -78,9 +82,9 @@ html {
 			top: 6.5em;
 			left: 0;
 			height: calc(100vh - 6.5em);
-			transform: translateX(-350%);
+			transform: translateX(-100%);
 			box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
-			transition: transform 0.4s;
+			transition: transform 0.6s;
 			z-index: 10;
 
 			&--active {
@@ -134,15 +138,17 @@ html {
 			top: 6.5em;
 			padding: 2.5em;
 			background-color: $white;
-			transform: translateY(30%);
+			transform: translateY(10%);
 			visibility: hidden;
+			opacity: 0;
 			box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
-			transition: transform 0.4s, visibility 0.3s;
+			transition: visibility 0.3s, transform .3s, opacity .3s;
 			z-index: 10;
 
 			&--active {
 				visibility: visible;
 				transform: translateY(0);
+				opacity: 1;
 			}
 
 			p {
@@ -162,11 +168,6 @@ html {
 
 			.second-btn {
 				border: 0.12em solid $main-color;
-				// transition: color .4s;
-
-				// &:hover {
-				// 	color: $white;
-				// }
 			}
 		}
 	}
@@ -289,9 +290,6 @@ html {
 	}
 }
 
-.nav-btn-animation {
-	animation: nav-btn-animation 0.4s;
-}
 
 // HEADER
 .header {
@@ -1321,6 +1319,10 @@ html {
 
 		&__desktop {
 			display: block;
+
+			&-head {
+				margin: 0;
+			}
 		}
 	}
 

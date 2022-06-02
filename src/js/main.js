@@ -1,11 +1,3 @@
-const burgerBtn = document.querySelector('.burger-btn');
-const barsIcon = document.querySelector('.fa-bars');
-const arrowIcon = document.querySelector('.fa-arrow-left');
-const infoBtn = document.querySelector('.info-btn');
-const mobileNav = document.querySelector('.nav__mobile-menu');
-const desktopNav = document.querySelector('.nav__desktop-menu');
-const infoNav = document.querySelector('.nav__mobile-info');
-const mobileNavItems = document.querySelectorAll('.nav__mobile-menu-items');
 //about-us
 const aboutUs = document.querySelector('.about-item--about');
 const chooseUs = document.querySelector('.about-item--choose-us');
@@ -16,31 +8,42 @@ const thirdInfo = document.querySelector('.about__info-content-text--third');
 // footer
 const footerYear = document.querySelector('.footer__year');
 
-burgerBtn.addEventListener('click', () => {
-	barsIcon.classList.toggle('hide');
-	arrowIcon.classList.toggle('hide');
-	if (infoNav.classList.contains('nav__mobile-info--active')) {
-		infoNav.classList.remove('nav__mobile-info--active');
-	}
-	mobileNav.classList.toggle('nav__mobile-menu--active');
-});
+function handleNav() {
+	const burgerBtn = document.querySelector('.burger-btn');
+	const navIcon = document.getElementById('nav-btn');
+	const navMobile = document.querySelector('.nav__mobile-menu');
+	const navInfo = document.querySelector('.nav__mobile-info');
+	const navInfoBtn = document.querySelector('.info-btn');
+	
+	function toggleNavMenu() {
+		navIcon.classList.toggle('fa-bars');
+		navIcon.classList.toggle('fa-arrow-left');
 
-infoBtn.addEventListener('click', () => {
-	if (mobileNav.classList.contains('nav__mobile-menu--active')) {
-		mobileNav.classList.remove('nav__mobile-menu--active');
-		barsIcon.classList.toggle('hide');
-		arrowIcon.classList.toggle('hide');
-	}
-	infoNav.classList.toggle('nav__mobile-info--active');
-});
+		if (navInfo.classList.contains('nav__mobile-info--active')) {
+			navInfo.classList.remove('nav__mobile-info--active');
+		}
 
-mobileNavItems.forEach((item) => {
-	item.addEventListener('click', () => {
-		mobileNav.classList.remove('nav__mobile-menu--active');
-		barsIcon.classList.toggle('hide');
-		arrowIcon.classList.toggle('hide');
-	});
-});
+		navMobile.classList.toggle('nav__mobile-menu--active');
+		burgerBtn.classList.add('nav-btn-animation');
+		setTimeout(() => {
+			burgerBtn.classList.remove('nav-btn-animation');
+		}, 400);
+	}
+
+	function toggleNavInfo() {
+		if (navMobile.classList.contains('nav__mobile-menu--active')) {
+			navMobile.classList.remove('nav__mobile-menu--active');
+			navIcon.classList.toggle('fa-bars');
+			navIcon.classList.toggle('fa-arrow-left');
+		}
+		navInfo.classList.toggle('nav__mobile-info--active');
+	}
+
+	burgerBtn.addEventListener('click', toggleNavMenu);
+	navInfoBtn.addEventListener('click', toggleNavInfo);
+}
+handleNav();
+///
 
 const addNavPosition = () => {
 	const navPosition = desktopNav.offsetTop;
@@ -62,7 +65,7 @@ const removeNavPosition = () => {
 	if (currentPosition < 61) {
 		desktopNav.classList.remove('nav-position');
 	}
-}
+};
 
 window.addEventListener('scroll', addNavPosition);
 window.addEventListener('scroll', removeNavPosition);
@@ -98,7 +101,7 @@ mission.addEventListener('click', () => {
 	thirdInfo.classList.add('about__info-content-text--third--active');
 });
 
-//footer 
+//footer
 const handleCurrentYear = () => {
 	const year = new Date().getFullYear();
 	footerYear.innerText = year;

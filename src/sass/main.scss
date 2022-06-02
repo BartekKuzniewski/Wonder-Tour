@@ -28,6 +28,16 @@ html {
 	text-decoration: none;
 }
 
+// ANIMATION
+@keyframes nav-btn-animation {
+	0% {
+		transform: scaleY(0);
+	}
+	100% {
+		transform: scaleY(1);
+	}
+}
+
 // NAVIGATION
 
 .nav {
@@ -62,14 +72,6 @@ html {
 			border: none;
 			cursor: pointer;
 			color: $secondary-color;
-
-			.fa-bars {
-				display: block;
-			}
-
-			.hide {
-				display: none;
-			}
 		}
 
 		.container {
@@ -87,7 +89,7 @@ html {
 			left: 0;
 			height: calc(100vh - 6.5em);
 			transform: translateX(-350%);
-			transition: transform 0.5s;
+			transition: transform 0.4s;
 			z-index: 10;
 
 			&--active {
@@ -293,6 +295,10 @@ html {
 			}
 		}
 	}
+}
+
+.nav-btn-animation {
+	animation: nav-btn-animation 0.4s;
 }
 
 // HEADER
@@ -1043,7 +1049,7 @@ html {
 
 .footer {
 	background-color: $footer-bg;
-	color: rgba(255,255,255, 0.3);
+	color: rgba(255, 255, 255, 0.3);
 	text-align: center;
 
 	&__text {
@@ -1499,7 +1505,7 @@ html {
 
 		&__socials {
 			flex: 1;
-			
+
 			h3 {
 				padding: 0;
 			}
@@ -1522,7 +1528,7 @@ html {
 			flex: 1;
 			align-items: flex-start;
 			padding: 0em 4em;
-			
+
 			ul {
 				justify-content: flex-start;
 			}
@@ -1530,7 +1536,6 @@ html {
 	}
 
 	.footer {
-	
 		&__text {
 			font-size: 1.6rem;
 		}

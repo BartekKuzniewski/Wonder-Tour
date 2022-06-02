@@ -543,6 +543,7 @@ html {
 				p {
 					text-align: center;
 					font-size: 1.5rem;
+					padding: 0 1em;
 					margin: 1em 0;
 					line-height: 1.6em;
 					opacity: 0.8;
@@ -627,7 +628,7 @@ html {
 	&__card {
 		position: relative;
 		width: 100%;
-		margin-bottom: 4em;
+		margin-bottom: 5em;
 
 		&-price {
 			position: absolute;
@@ -926,7 +927,7 @@ html {
 		text-align: center;
 		font-size: 2rem;
 		letter-spacing: 0.01em;
-		margin-bottom: 2em;
+		margin-bottom: 1.5em;
 	}
 
 	&__socials {
@@ -986,7 +987,7 @@ html {
 			i {
 				font-size: 2.2rem;
 				color: $main-color;
-				margin-right: 0.5em;
+				margin-right: 1em;
 			}
 		}
 	}

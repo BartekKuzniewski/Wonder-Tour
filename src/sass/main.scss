@@ -38,7 +38,6 @@ html {
 	}
 }
 
-
 .nav-btn-animation {
 	animation: nav-btn-animation 0.4s;
 }
@@ -142,7 +141,7 @@ html {
 			visibility: hidden;
 			opacity: 0;
 			box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
-			transition: visibility 0.3s, transform .3s, opacity .3s;
+			transition: visibility 0.3s, transform 0.3s, opacity 0.3s;
 			z-index: 10;
 
 			&--active {
@@ -289,7 +288,6 @@ html {
 		}
 	}
 }
-
 
 // HEADER
 .header {
@@ -1182,46 +1180,6 @@ html {
 		}
 	}
 
-	.about {
-		&__info {
-			padding: 1em 5em;
-
-			&-heading {
-				text-align: left;
-			}
-
-			&-content {
-				&-headings {
-					padding: 0;
-
-					.about-items {
-						width: 100%;
-						justify-content: flex-start;
-						display: flex;
-						align-items: center;			
-					}
-
-					.about-item {
-						padding: 0.5em 0;
-						margin-right: 2em;
-						border-top: none;
-					}
-				}
-
-				&-text {
-					p {
-						padding: 0;
-						text-align: left;
-					}
-
-					.buttons {
-						justify-content: flex-start;
-					}
-				}
-			}
-		}
-	}
-
 	.services {
 		&__card {
 			max-width: 31em;
@@ -1378,22 +1336,29 @@ html {
 
 			&-content {
 				&-headings {
+					text-align: center;
+					padding: 0;
+
 					.about-items {
+						width: 100%;
+						display: flex;
 						justify-content: center;
+						align-items: center;
 					}
+
 					.about-item {
 						font-size: 1.7rem;
-						letter-spacing: normal;
-						padding: 0.5em .8em;
-						margin-right: 0;
+						padding: 0.5em;
+						letter-spacing: .07em;
+						border-top: none;
 					}
 				}
 
 				&-text {
 					p {
-						font-size: 1.7rem;
+						font-size: 1.6rem;
 						text-align: center;
-						letter-spacing: .02em;
+						letter-spacing: 0.02em;
 					}
 				}
 

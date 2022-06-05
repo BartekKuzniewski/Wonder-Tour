@@ -1054,13 +1054,82 @@ html {
 	}
 }
 
-
 // ABOUT SUBPAGE
 
 .subpage-header {
+	position: relative;
 	background-image: url('../img/subheader-small.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: 50%;
+	z-index: 0;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.3);
+		z-index: -1;
+		content: '';
+	}
+
+	&__box {
+		padding: 5em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+	}
+
+	&__heading {
+		font-size: 3rem;
+		letter-spacing: 0.05em;
+		margin-bottom: 0.5em;
+	}
+
+	&__paths {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 1.5rem;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		list-style: none;
+
+		a {
+			position: relative;
+			color: $white;
+			cursor: pointer;
+			text-decoration: none;
+			transition: text-decoration .4s;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			&::after {
+				content: '/';
+				position: absolute;
+				display: inline-block;
+				top: 50%;
+				right: -26px;
+				color: white;
+				transform: translate3d(0, -50%, 0);
+			}
+		}
+	}
+
+	&__path {
+		padding: 0em 1.5em;
+	}
+
+	.active {
+		opacity: .6;
+	}
 }
 
 // MEDIA
@@ -1543,7 +1612,7 @@ html {
 			}
 
 			&-text {
-				p{
+				p {
 					padding: 1em 3em;
 				}
 			}

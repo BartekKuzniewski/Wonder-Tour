@@ -1061,7 +1061,7 @@ html {
 	background-image: url('../img/subheader-small.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: 50%;
+	background-position: 50% 1%;
 	z-index: 0;
 
 	&::before {
@@ -1237,6 +1237,11 @@ html {
 			}
 		}
 	}
+
+	// about subpage
+	.subpage-header {
+		background-image: url('../img/subheader-medium.jpg');
+	}
 }
 
 @media (min-width: 768px) {
@@ -1356,6 +1361,15 @@ html {
 			}
 		}
 	}
+
+	// about subpage
+
+	.subpage-header {
+		&__heading {
+			font-size: 3.6rem;
+		}
+	}
+
 }
 
 @media (min-width: 992px) {
@@ -1591,6 +1605,21 @@ html {
 	.footer {
 		&__text {
 			font-size: 1.6rem;
+		}
+	}
+
+	// about subpage
+
+	.subpage-header {
+
+		background-image: url('../img/subheader-large.jpg');
+
+		&__heading {
+			font-size: 4rem;
+		}
+
+		&__box {
+			padding: 12em 5em;
 		}
 	}
 }

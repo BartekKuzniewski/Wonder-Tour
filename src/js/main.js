@@ -1,3 +1,4 @@
+const desktopNav = document.querySelector('.nav__desktop-menu');
 //about-us
 const aboutUs = document.querySelector('.about-item--about');
 const chooseUs = document.querySelector('.about-item--choose-us');

@@ -1567,4 +1567,14 @@ html {
 			max-width: 340px;
 		}
 	}
+
+	.contact {
+		&__socials {
+			margin-right: 2em;
+		}
+
+		&__info-box {
+			margin-right: 2em;
+		}
+	}
 }

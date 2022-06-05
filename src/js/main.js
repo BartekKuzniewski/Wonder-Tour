@@ -6,9 +6,15 @@ const mission = document.querySelector('.about-item--mission');
 const firstInfo = document.querySelector('.about__info-content-text--first');
 const secondInfo = document.querySelector('.about__info-content-text--second');
 const thirdInfo = document.querySelector('.about__info-content-text--third');
+//achievements
+const counterItems = document.querySelectorAll(
+	'.achievements__card-content-number'
+);
+const counterBox = document.querySelector('.achievements__cards');
 // footer
 const footerYear = document.querySelector('.footer__year');
 
+//nav
 function handleNav() {
 	const burgerBtn = document.querySelector('.burger-btn');
 	const navIcon = document.getElementById('nav-btn');
@@ -29,7 +35,6 @@ function handleNav() {
 		}, 400);
 	}
 	function toggleNavMenu() {
-
 		toggleIcons();
 
 		if (navInfo.classList.contains('nav__mobile-info--active')) {
@@ -56,7 +61,7 @@ function handleNav() {
 			toggleIcons();
 		}
 		navInfo.classList.toggle('nav__mobile-info--active');
-		navInfo.classList.add('nav-info-animation')
+		navInfo.classList.add('nav-info-animation');
 	}
 
 	burgerBtn.addEventListener('click', toggleNavMenu);
@@ -68,8 +73,6 @@ handleNav();
 const addNavPosition = () => {
 	const navPosition = desktopNav.offsetTop;
 	const currentPosition = window.scrollY;
-	console.log(navPosition);
-	console.log(currentPosition);
 
 	if (currentPosition >= navPosition + 10) {
 		desktopNav.classList.add('nav-position');
@@ -79,8 +82,6 @@ const addNavPosition = () => {
 const removeNavPosition = () => {
 	const navPosition = desktopNav.offsetTop;
 	const currentPosition = window.scrollY;
-	console.log(navPosition);
-	console.log(currentPosition);
 
 	if (currentPosition < 61) {
 		desktopNav.classList.remove('nav-position');
@@ -120,6 +121,37 @@ mission.addEventListener('click', () => {
 	secondInfo.classList.remove('about__info-content-text--second--active');
 	thirdInfo.classList.add('about__info-content-text--third--active');
 });
+
+//achievements
+
+const options = {
+	rootMargin: '-150px',
+};
+
+const startCounter = (entry) => {
+	if (entry[0].isIntersecting) {
+
+		counterItems.forEach((item) => {
+			const updateCounter = () => {
+				const finalNumber = item.getAttribute('data-number');
+				const value = parseInt(item.textContent);
+
+				const counterSpeed = finalNumber / 20;
+
+				if (value < finalNumber) {
+					item.textContent = `${Math.floor(value + counterSpeed)}`;
+					setTimeout(updateCounter, 50);
+				} else {
+					item.textContent = finalNumber;
+				}
+			};
+			updateCounter();
+		});
+	}
+};
+
+const observer = new IntersectionObserver(startCounter, options);
+observer.observe(counterBox);
 
 //footer
 const handleCurrentYear = () => {

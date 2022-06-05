@@ -1,99 +1,63 @@
 @use 'colors.scss' as *;
 
 .wrapper {
-    width: 100%;
-    max-width: 120em;
-    margin: 0 auto;
-}
-
-.btn {
-    position: relative;
-    font-size: 1.6rem;
-    padding: 0.7em 1.7em;
-    background: none;
-    border: 0.15em solid $main-color;
-    cursor: pointer;
-    overflow: hidden;
-    transition: color 0.5s;
-
-    &::after,
-    &::before {
-        display: block;
-        position: absolute;
-        content: '';
-        top: -10%;
-        width: 0%;
-        height: 130%;
-        background-color: $main-color;
-        transition: width 0.5s;
-    }
-
-    &::before {
-        left: 50%;
-    }
-
-    &::after {
-        right: 50%;
-    }
-
-    &:hover::before {
-        width: 60%;
-    }
-
-    &:hover::after {
-        width: 60%;
-    }
-
-    &:hover {
-        color: $white;
-    }
+	width: 100%;
+	max-width: 120em;
+	margin: 0 auto;
 }
 
 .first-btn {
-    font-size: 1.8rem;
-    padding: 1em 2em;
-    background-color: $main-color;
-    color: $white;
-    border: .12em solid $main-color;
-    cursor: pointer;
-    margin-bottom: 1em;
-    transition: color 0.3s ease-in-out, border 0.3s ease-in-out,
-        background-color 0.3s ease-in-out;
+	font-size: 1.8rem;
+	padding: 1em 2em;
+	background-color: $main-color;
+	color: $white;
+	border: 0.1em solid $main-color;
+	cursor: pointer;
+	margin-bottom: 1em;
+	transition: color 0.3s ease-in-out, border 0.3s ease-in-out,
+		background-color 0.3s ease-in-out;
 
-    &:hover {
-        background-color: transparent;
-        color: $dark;
-        border: 0.12em solid $dark;
-    }
+	&:hover {
+		background-color: transparent;
+		color: $dark;
+		border: 0.12em solid $dark;
+	}
+
+	&--white {
+		&:hover {
+			color: $white;
+			border: 0.12em solid $white;
+		}
+	}
 }
 
 .second-btn {
-    font-size: 1.8rem;
-    padding: 1em 2em;
-    background-color: $white;
-    color: $dark;
-    border: 0.12em solid $dark;
-    cursor: pointer;
-    transition: background-color 0.4s, border 0.4s, color .4s;
+	font-size: 1.8rem;
+	padding: 1em 2em;
+	background-color: $white;
+	color: $dark;
+	border: 0.1em solid $dark;
+	cursor: pointer;
+	transition: background-color 0.4s, border 0.4s, color 0.4s;
 
-    &:hover {
-        background-color: $main-color;
-        border: .12em solid $main-color;
-        color: $white;
-    }
+	&:hover {
+		background-color: $main-color;
+		border: 0.12em solid $main-color;
+		color: $white;
+	}
 }
 
 .section-padding {
-    padding: 7em 2em;
+	padding: 7em 2em;
 }
 
 .section-heading {
-    position: relative;
-    margin-bottom: 1.5em;
-    font-size: 3rem;
-    font-weight: 300;
-    text-transform: uppercase;
-    text-align: center;
-    color: $dark;
-    letter-spacing: 2px;
+	position: relative;
+	margin-bottom: 1.5em;
+	font-size: 3rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: center;
+	color: $dark;
+	letter-spacing: 2px;
 }

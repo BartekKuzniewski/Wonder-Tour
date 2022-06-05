@@ -1054,6 +1054,15 @@ html {
 	}
 }
 
+
+// ABOUT SUBPAGE
+
+.subpage-header {
+	background-image: url('../img/subheader-small.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 // MEDIA
 
 @media (min-width: 576px) {

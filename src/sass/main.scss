@@ -514,7 +514,7 @@ html {
 						color: $main-color;
 					}
 
-					&--about {
+					&--first {
 						&--active {
 							color: $main-color;
 							border-bottom: 0.15em solid $main-color;
@@ -522,7 +522,7 @@ html {
 						}
 					}
 
-					&--choose-us {
+					&--second {
 						&--active {
 							color: $main-color;
 							border-bottom: 0.15em solid $main-color;
@@ -530,7 +530,7 @@ html {
 						}
 					}
 
-					&--mission {
+					&--third {
 						&--active {
 							color: $main-color;
 							border-bottom: 0.15em solid $main-color;
@@ -541,15 +541,19 @@ html {
 			}
 
 			&-text {
-				p {
+
+				.text {
 					text-align: center;
 					font-size: 1.5rem;
 					padding: 0 1em;
 					margin: 1em 0;
 					line-height: 1.6em;
 					opacity: 0.8;
-				}
 
+					&--subpage {
+						text-align: left;
+					}
+				}
 				.buttons {
 					display: flex;
 					flex-direction: column;
@@ -568,11 +572,87 @@ html {
 						display: block;
 					}
 				}
-
 				&--third {
 					display: none;
 					&--active {
 						display: block;
+					}
+				}
+
+				.progress {
+					width: 100%;
+					padding: 0em 1em;
+					margin-top: 2em;
+					font-size: 1.5rem;
+					text-align: left;
+
+					&__title {
+						// font-size: 1.6rem;
+						letter-spacing: 0.075em;
+						margin-bottom: 0.5em;
+						color: $gray;
+					}
+
+					&__bar {
+						height: 0.6em;
+						background-color: $light-gray;
+
+						&-linear {
+							position: relative;
+							height: 0.6em;
+
+							&--first {
+								width: 79%;
+								background-color: #50ba87;
+							}
+
+							&--second {
+								width: 72%;
+								background-color: #e7a855;
+							}
+
+							&--third {
+								width: 88%;
+								background-color: $main-color;
+							}
+						}
+
+						&-value {
+							position: absolute;
+							// font-size: 1.6rem;
+							letter-spacing: 0.075em;
+							color: $gray;
+							bottom: 100%;
+							right: -4px;
+							margin-bottom: 0.5em;
+							transform: translate3d(50%, 0, 0);
+						}
+
+						&-marker {
+							display: inline-block;
+							position: absolute;
+							top: 50%;
+							right: 0;
+							width: 1.3em;
+							height: 1.3em;
+							// background: $main-color;
+							border: 0.35em solid $white;
+							border-radius: 50%;
+							transform: translate(50%, -50%);
+							box-shadow: 0 0 2px 3px rgb(0 0 0 / 10%);
+
+							&--first {
+								background-color: #50ba87;
+							}
+
+							&--second {
+								background-color: #e7a855;
+							}
+
+							&--third {
+								background-color: $main-color;
+							}
+						}
 					}
 				}
 			}
@@ -1105,7 +1185,7 @@ html {
 			color: $white;
 			cursor: pointer;
 			text-decoration: none;
-			transition: text-decoration .4s;
+			transition: text-decoration 0.4s;
 
 			&:hover {
 				text-decoration: underline;
@@ -1128,7 +1208,7 @@ html {
 	}
 
 	.active {
-		opacity: .6;
+		opacity: 0.6;
 	}
 }
 
@@ -1163,7 +1243,7 @@ html {
 					padding: 0em 8em;
 				}
 				&-text {
-					p {
+					.text {
 						font-size: 1.6rem;
 						margin-bottom: 2em;
 						padding: 0 2em;
@@ -1269,7 +1349,7 @@ html {
 
 	.about {
 		&__info-content-text {
-			p {
+			.text {
 				padding: 0em 8em;
 			}
 		}
@@ -1369,7 +1449,6 @@ html {
 			font-size: 3.6rem;
 		}
 	}
-
 }
 
 @media (min-width: 992px) {
@@ -1459,7 +1538,7 @@ html {
 				}
 
 				&-text {
-					p {
+					.text {
 						font-size: 1.6rem;
 						text-align: center;
 						letter-spacing: 0.02em;
@@ -1611,7 +1690,6 @@ html {
 	// about subpage
 
 	.subpage-header {
-
 		background-image: url('../img/subheader-large.jpg');
 
 		&__heading {
@@ -1641,7 +1719,7 @@ html {
 			}
 
 			&-text {
-				p {
+				.text {
 					padding: 1em 3em;
 				}
 			}

@@ -1,8 +1,8 @@
 const desktopNav = document.querySelector('.nav__desktop-menu');
 //about-us
-const aboutUs = document.querySelector('.about-item--about');
-const chooseUs = document.querySelector('.about-item--choose-us');
-const mission = document.querySelector('.about-item--mission');
+const aboutUs = document.querySelector('.about-item--first');
+const chooseUs = document.querySelector('.about-item--second');
+const mission = document.querySelector('.about-item--third');
 const firstInfo = document.querySelector('.about__info-content-text--first');
 const secondInfo = document.querySelector('.about__info-content-text--second');
 const thirdInfo = document.querySelector('.about__info-content-text--third');
@@ -93,9 +93,9 @@ window.addEventListener('scroll', removeNavPosition);
 //about-us
 
 aboutUs.addEventListener('click', () => {
-	aboutUs.classList.add('about-item--about--active');
-	chooseUs.classList.remove('about-item--choose-us--active');
-	mission.classList.remove('about-item--mission--active');
+	aboutUs.classList.add('about-item--first--active');
+	chooseUs.classList.remove('about-item--second--active');
+	mission.classList.remove('about-item--third--active');
 
 	firstInfo.classList.add('about__info-content-text--first--active');
 	secondInfo.classList.remove('about__info-content-text--second--active');
@@ -103,9 +103,9 @@ aboutUs.addEventListener('click', () => {
 });
 
 chooseUs.addEventListener('click', () => {
-	aboutUs.classList.remove('about-item--about--active');
-	chooseUs.classList.add('about-item--choose-us--active');
-	mission.classList.remove('about-item--mission--active');
+	aboutUs.classList.remove('about-item--first--active');
+	chooseUs.classList.add('about-item--second--active');
+	mission.classList.remove('about-item--third--active');
 
 	firstInfo.classList.remove('about__info-content-text--first--active');
 	secondInfo.classList.add('about__info-content-text--second--active');
@@ -113,9 +113,9 @@ chooseUs.addEventListener('click', () => {
 });
 
 mission.addEventListener('click', () => {
-	aboutUs.classList.remove('about-item--about--active');
-	chooseUs.classList.remove('about-item--choose-us--active');
-	mission.classList.add('about-item--mission--active');
+	aboutUs.classList.remove('about-item--first--active');
+	chooseUs.classList.remove('about-item--second--active');
+	mission.classList.add('about-item--third--active');
 
 	firstInfo.classList.remove('about__info-content-text--first--active');
 	secondInfo.classList.remove('about__info-content-text--second--active');

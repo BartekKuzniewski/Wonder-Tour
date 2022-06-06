@@ -541,7 +541,6 @@ html {
 			}
 
 			&-text {
-
 				.text {
 					text-align: center;
 					font-size: 1.5rem;
@@ -653,6 +652,21 @@ html {
 								background-color: $main-color;
 							}
 						}
+					}
+				}
+
+				.skills {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					gap: 2em;
+					margin: 2em 0;
+
+					&__text {
+						text-align: center;
+						margin: 1em 0;
+						font-size: 1.4rem;
 					}
 				}
 			}

@@ -468,6 +468,10 @@ html {
 		img {
 			max-width: 100%;
 		}
+
+		.about-img {
+			padding: 1em;
+		}
 	}
 
 	&__info {
@@ -478,23 +482,25 @@ html {
 			h2 {
 				font-size: 2.4rem;
 			}
+
+			.subpage-heading {
+				font-size: 3rem;
+				letter-spacing: .05em;
+				color: $gray;
+			}
 		}
 
 		&-content {
 			&-headings {
 				display: flex;
-				// flex-direction: column;
 				align-items: center;
-				justify-content: center;
-				// flex-wrap: wrap;
+				justify-content: center;		
 				padding: 0 4em;
 
 				.about-items {
 					list-style: none;
 					text-align: center;
 					text-transform: uppercase;
-					// display: flex;
-					// flex-direction: column;
 				}
 
 				.about-item {

@@ -1285,6 +1285,10 @@ html {
 							margin-right: 2em;
 						}
 					}
+
+					.skills {
+						flex-direction: row;
+					}
 				}
 			}
 		}
@@ -1570,11 +1574,12 @@ html {
 				}
 
 				&-text {
+					padding: 0em 2em;
+
 					.text {
 						font-size: 1.6rem;
 						text-align: center;
 						letter-spacing: 0.02em;
-						padding: 1em 1.5em;
 					}
 				}
 

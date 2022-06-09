@@ -485,7 +485,7 @@ html {
 
 			.subpage-heading {
 				font-size: 3rem;
-				letter-spacing: .05em;
+				letter-spacing: 0.05em;
 				color: $gray;
 			}
 		}
@@ -494,7 +494,7 @@ html {
 			&-headings {
 				display: flex;
 				align-items: center;
-				justify-content: center;		
+				justify-content: center;
 				padding: 0 4em;
 
 				.about-items {
@@ -1232,6 +1232,52 @@ html {
 
 .our-team {
 	background-color: $light-gray;
+
+	&__cards {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	
+	&__card {
+		margin-bottom: 3em;
+		padding: 1em 2em;
+		cursor: pointer;
+
+		&:hover > .our-team__card-info {
+			color: $main-color;
+			border-color: $main-color;
+		}
+		
+		&-img {
+			img {
+				width: 100%;
+				border-top-left-radius: .4em;
+				border-top-right-radius: .4em;
+			}
+		}
+
+		&-info {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-top: 2em;
+			padding-bottom: 1.5em;
+			border-bottom: .2em solid $dark;
+			transition: border-color .3s;
+
+			&-name {
+				font-size: 1.8rem;
+				transition: color .3s;
+			}
+
+			&-job-position {
+				font-size: 1.5rem;
+				color: $gray;
+			}
+		}
+	}
 }
 
 // MEDIA
@@ -1252,7 +1298,7 @@ html {
 	.about {
 		&__img {
 			margin-bottom: 4em;
-			
+
 			.about-img {
 				padding: 0em 2em;
 			}
@@ -1384,7 +1430,7 @@ html {
 
 	.about {
 		&__info-content-text {
-		padding: 0em 10em;
+			padding: 0em 10em;
 		}
 
 		&__info {

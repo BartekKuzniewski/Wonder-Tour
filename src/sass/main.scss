@@ -1239,7 +1239,7 @@ html {
 		align-items: center;
 		justify-content: center;
 	}
-	
+
 	&__card {
 		margin-bottom: 3em;
 		padding: 1em 2em;
@@ -1249,12 +1249,12 @@ html {
 			color: $main-color;
 			border-color: $main-color;
 		}
-		
+
 		&-img {
 			img {
 				width: 100%;
-				border-top-left-radius: .4em;
-				border-top-right-radius: .4em;
+				border-top-left-radius: 0.4em;
+				border-top-right-radius: 0.4em;
 			}
 		}
 
@@ -1264,12 +1264,12 @@ html {
 			justify-content: space-between;
 			margin-top: 2em;
 			padding-bottom: 1.5em;
-			border-bottom: .2em solid $dark;
-			transition: border-color .3s;
+			border-bottom: 0.2em solid $dark;
+			transition: border-color 0.3s;
 
 			&-name {
 				font-size: 1.8rem;
-				transition: color .3s;
+				transition: color 0.3s;
 			}
 
 			&-job-position {
@@ -1536,6 +1536,17 @@ html {
 			font-size: 3.6rem;
 		}
 	}
+
+	.our-team {
+		&__cards {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			max-width: 350px;
+		}
+	}
 }
 
 @media (min-width: 992px) {
@@ -1640,6 +1651,7 @@ html {
 			}
 		}
 	}
+
 	.services {
 		&__cards {
 			gap: 3.5em;
@@ -1849,6 +1861,15 @@ html {
 
 		&__info-box {
 			margin-right: 2em;
+		}
+	}
+
+	//subpage about us
+
+	.our-team {
+		&__card {
+			max-width: 370px;
+			margin-right: 3em;
 		}
 	}
 }

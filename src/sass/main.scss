@@ -1321,14 +1321,14 @@ html {
 		flex-direction: column;
 	}
 
-
 	&__form-label {
 		font-size: 1.3rem;
 		text-transform: uppercase;
-		margin-bottom: .5em;
+		margin-bottom: 0.5em;
 	}
 
-	&__form-input, &__form-textarea {
+	&__form-input,
+	&__form-textarea {
 		font-size: 1.6rem;
 		margin-bottom: 2em;
 		padding: 0.5em 1em;
@@ -1341,7 +1341,6 @@ html {
 		width: 100%;
 		min-height: 150px;
 	}
-
 }
 
 // MEDIA
@@ -1593,16 +1592,6 @@ html {
 		}
 	}
 
-	.localization {
-		.map-small {
-			display: none;
-		}
-
-		.map-medium {
-			display: block;
-		}
-	}
-
 	// about subpage
 
 	.subpage-header {
@@ -1619,6 +1608,48 @@ html {
 
 		&__card {
 			max-width: 350px;
+		}
+	}
+
+	.localization {
+		.map-small {
+			display: none;
+		}
+
+		.map-medium {
+			display: block;
+		}
+	}
+
+	.get-in-touch {
+		.heading {
+			// padding: 1em;
+			flex-direction: row;
+			gap: 2em;
+
+			&__text {
+				font-size: 1.8rem;
+				line-height: 1.8em;
+				padding: 0 1em;
+				border-top: none;
+				border-left: 0.1em solid $gray;
+				flex: 2;
+			}
+
+			.section-heading {
+				letter-spacing: 0;
+				margin-bottom: 0;
+				text-transform: none;
+				font-weight: 700;
+				flex: 1;
+			}
+		}
+
+		&__form {
+			padding: 0em 2em;
+		}
+		.first-btn {
+			align-self: flex-end;
 		}
 	}
 }
@@ -1955,5 +1986,23 @@ html {
 		.map-large {
 			display: block;
 		}
+	}
+
+	.get-in-touch {
+		.heading {
+			&__text {
+				font-size: 2rem;
+				padding: 0em 2em;
+			}
+
+			.section-heading {
+				font-size: 3.6rem;
+			}
+		}
+
+		&__form-label {
+			font-size: 1.5rem;
+		}
+		
 	}
 }

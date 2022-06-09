@@ -1280,6 +1280,20 @@ html {
 	}
 }
 
+.localization {
+	.map-small {
+		display: block;
+	}
+	
+	.map-medium {
+		display: none;
+	}
+
+	.map-large {
+		display: none;
+	}
+}
+
 // MEDIA
 
 @media (min-width: 576px) {
@@ -1526,6 +1540,16 @@ html {
 				font-size: 1.6rem;
 				padding: 0em 6em;
 			}
+		}
+	}
+
+	.localization {
+		.map-small {
+			display: none;
+		}
+		
+		.map-medium {
+			display: block;
 		}
 	}
 
@@ -1870,6 +1894,16 @@ html {
 		&__card {
 			max-width: 370px;
 			margin-right: 3em;
+		}
+	}
+
+	.localization {
+		.map-medium {
+			display: none;
+		}
+
+		.map-large {
+			display: block;
 		}
 	}
 }

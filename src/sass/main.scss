@@ -1155,6 +1155,7 @@ html {
 
 .subpage-header {
 	position: relative;
+	margin: -0.1em;
 	background-image: url('../img/subheader-small.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1227,6 +1228,10 @@ html {
 	.active {
 		opacity: 0.6;
 	}
+}
+
+.our-team {
+	background-color: $light-gray;
 }
 
 // MEDIA

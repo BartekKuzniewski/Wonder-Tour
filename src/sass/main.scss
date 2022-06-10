@@ -1174,7 +1174,7 @@ html {
 	}
 
 	&__box {
-		padding: 7em 5em ;
+		padding: 7em 5em;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -1423,6 +1423,14 @@ html {
 		}
 	}
 
+	.our-tours {
+		&__cards {
+			flex-direction: column;
+			margin: 0 auto;
+			max-width: 400px;
+		}
+	}
+
 	.hero-img {
 		padding: 6em 4em;
 	}
@@ -1508,6 +1516,14 @@ html {
 	.services {
 		&__card {
 			max-width: 31em;
+		}
+	}
+
+	.our-tours {
+		&__cards {
+			flex-direction: column;
+			margin: none;
+			max-width: 100%;
 		}
 	}
 
@@ -2003,6 +2019,5 @@ html {
 		&__form-label {
 			font-size: 1.5rem;
 		}
-		
 	}
 }

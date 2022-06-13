@@ -92,35 +92,35 @@ window.addEventListener('scroll', addNavPosition);
 window.addEventListener('scroll', removeNavPosition);
 //about-us
 
-aboutUs.addEventListener('click', () => {
-	aboutUs.classList.add('about-item--first--active');
-	chooseUs.classList.remove('about-item--second--active');
-	mission.classList.remove('about-item--third--active');
+// aboutUs.addEventListener('click', () => {
+// 	aboutUs.classList.add('about-item--first--active');
+// 	// chooseUs.classList.remove('about-item--second--active');
+// 	mission.classList.remove('about-item--third--active');
 
-	firstInfo.classList.add('about__info-content-text--first--active');
-	secondInfo.classList.remove('about__info-content-text--second--active');
-	thirdInfo.classList.remove('about__info-content-text--third--active');
-});
+// 	firstInfo.classList.add('about__info-content-text--first--active');
+// 	secondInfo.classList.remove('about__info-content-text--second--active');
+// 	thirdInfo.classList.remove('about__info-content-text--third--active');
+// });
 
-chooseUs.addEventListener('click', () => {
-	aboutUs.classList.remove('about-item--first--active');
-	chooseUs.classList.add('about-item--second--active');
-	mission.classList.remove('about-item--third--active');
+// chooseUs.addEventListener('click', () => {
+// 	aboutUs.classList.remove('about-item--first--active');
+// 	chooseUs.classList.add('about-item--second--active');
+// 	mission.classList.remove('about-item--third--active');
 
-	firstInfo.classList.remove('about__info-content-text--first--active');
-	secondInfo.classList.add('about__info-content-text--second--active');
-	thirdInfo.classList.remove('about__info-content-text--third--active');
-});
+// 	firstInfo.classList.remove('about__info-content-text--first--active');
+// 	secondInfo.classList.add('about__info-content-text--second--active');
+// 	thirdInfo.classList.remove('about__info-content-text--third--active');
+// });
 
-mission.addEventListener('click', () => {
-	aboutUs.classList.remove('about-item--first--active');
-	chooseUs.classList.remove('about-item--second--active');
-	mission.classList.add('about-item--third--active');
+// mission.addEventListener('click', () => {
+// 	aboutUs.classList.remove('about-item--first--active');
+// 	chooseUs.classList.remove('about-item--second--active');
+// 	mission.classList.add('about-item--third--active');
 
-	firstInfo.classList.remove('about__info-content-text--first--active');
-	secondInfo.classList.remove('about__info-content-text--second--active');
-	thirdInfo.classList.add('about__info-content-text--third--active');
-});
+// 	firstInfo.classList.remove('about__info-content-text--first--active');
+// 	secondInfo.classList.remove('about__info-content-text--second--active');
+// 	thirdInfo.classList.add('about__info-content-text--third--active');
+// });
 
 //achievements
 
@@ -130,7 +130,6 @@ const options = {
 
 const startCounter = (entry) => {
 	if (entry[0].isIntersecting) {
-
 		counterItems.forEach((item) => {
 			const updateCounter = () => {
 				const finalNumber = item.getAttribute('data-number');
@@ -160,3 +159,19 @@ const handleCurrentYear = () => {
 };
 
 handleCurrentYear();
+
+//contact us 
+const sendBtn = document.querySelector('.send-btn');
+const name = document.querySelector('#name');
+const mail = document.querySelector('#mail');
+const msg = document.querySelector('#textarea');
+
+const allInputs = [name, mail, msg];
+
+sendBtn.addEventListener('click', e => {
+	e.preventDefault();
+
+	allInputs.forEach(input => {
+		input.value = ''
+	})
+})

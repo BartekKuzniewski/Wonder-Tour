@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="./dist/css/main.min.css"></head>
 
 <body>
-    <nav class="nav">
+    <nav class="nav" id="home">
         <div class="nav__mobile">
 
             <div class="container">
@@ -96,7 +96,7 @@
         </div>
     </nav>
 
-    <header class="header" id="home">
+    <header class="header" >
         <div class="wrapper">
             <div class="header__info">
                 <p class="header__info-text">BUILD YOUR NEXT HOLIDAY TRIP WITH US
@@ -110,7 +110,7 @@
     </header>
 
     <main>
-        <section class="tours section-padding" id="tours">
+        <section class="tours section-padding section" id="tours">
             <div class="wrapper">
                 <div class="tours__cards">
                     <div class="tours__card tours__card--first">
@@ -136,7 +136,7 @@
             </div>
         </section>
 
-        <section class="about section-padding">
+        <section class="about section-padding section">
             <div class="wrapper">
                 <div class="about__content">
 
@@ -192,7 +192,7 @@
             </div>
         </section>
 
-        <section class="services section-padding">
+        <section class="services section-padding section">
             <div class="wrapper">
                 <h2 class="section-heading">Our Services</h2>
                 <div class="services__cards">
@@ -241,14 +241,14 @@
             </div>
         </section>
 
-        <section class="hero-img">
+        <section class="hero-img section">
             <h2 class="hero-img__tittle"><span>First-class Impressions</span> <br> are Waiting for You!</h2>
             <p class="hero-img__text">Our agency offers travelers various tours and excursions with destinations all
                 over the world. Browse our website to find your dream tour!</p>
             <a href="#" class="first-btn first-btn--white">Book a Tour Now</a>
         </section>
 
-        <section class="hot-tours section-padding">
+        <section class="hot-tours section-padding section">
             <div class="wrapper">
                 <h2 class="section-heading">Hot Tours</h2>
                 <div class="hot-tours__cards">
@@ -310,7 +310,7 @@
             </div>
         </section>
 
-        <section class="discount section-padding">
+        <section class="discount section-padding section">
             <div class="wrapper">
                 <div class="discount__content">
                     <h2 class="discount__content-heading">Sign Up for 25% Discount</h2>
@@ -325,7 +325,7 @@
             </div>
         </section>
 
-        <section class="achievements section-padding">
+        <section class="achievements section-padding section">
             <div class="wrapper">
                 <h2 class="section-heading">7 Years of Following The Dream</h2>
 
@@ -352,7 +352,7 @@
             </div>
         </section>
 
-        <section class="reviews section-padding">
+        <section class="reviews section-padding section">
             <div class="wrapper">
                 <h2 class="section-heading">What People Say</h2>
 
@@ -391,7 +391,7 @@
             </div>
         </section>
 
-        <section class="contact section-padding">
+        <section class="contact section-padding section">
             <div class="wrapper">
                 <div class="contact__container">
                     <div class="contact__socials">
@@ -436,13 +436,15 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer section">
         <div class="wrapper">
             <p class="footer__text"> &copy; <span class="footer__year"></span> Created by Kuźniewski Bartosz</p>
         </div>
     </footer>
 
     <script src="./dist/js/main.min.js" defer></script>
+
+    <a href="#home" class="home-btn"><i class="fa-solid fa-angle-up"></i></a>
 </body>
 
 </html>

@@ -28,6 +28,27 @@ html {
 	text-decoration: none;
 }
 
+.home-btn {
+	display: none;
+	position: fixed;
+    right: 15px;
+    bottom: 15px;
+    z-index: 100;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    line-height: 38px;
+    color: #ffffff;
+    background: #01b3a7;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+
+	&--active {
+		display: block;
+	}
+}
+
 // ANIMATION
 @keyframes nav-btn-animation {
 	0% {

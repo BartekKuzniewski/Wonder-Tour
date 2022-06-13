@@ -88,6 +88,24 @@ const removeNavPosition = () => {
 	}
 };
 
+const handleHomeBtn = () => {
+	const homeBtn = document.querySelector('.home-btn');
+	const allSections = document.querySelectorAll('.section');
+	const currentSection = window.scrollY;
+
+	allSections.forEach((section) => {
+		if (
+			section.classList.contains('section') &&
+			section.offsetTop <= currentSection
+		) {
+			homeBtn.classList.add('home-btn--active');
+		} else if (currentSection < 300) {
+			homeBtn.classList.remove('home-btn--active');
+		}
+	});
+};
+
+window.addEventListener('scroll', handleHomeBtn);
 window.addEventListener('scroll', addNavPosition);
 window.addEventListener('scroll', removeNavPosition);
 //about-us
@@ -159,19 +177,3 @@ const handleCurrentYear = () => {
 };
 
 handleCurrentYear();
-
-//contact us 
-const sendBtn = document.querySelector('.send-btn');
-const name = document.querySelector('#name');
-const mail = document.querySelector('#mail');
-const msg = document.querySelector('#textarea');
-
-const allInputs = [name, mail, msg];
-
-sendBtn.addEventListener('click', e => {
-	e.preventDefault();
-
-	allInputs.forEach(input => {
-		input.value = ''
-	})
-})

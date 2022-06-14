@@ -65,8 +65,22 @@ html {
 	}
 }
 
+@keyframes home-btn-animation {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
 .nav-btn-animation {
 	animation: nav-btn-animation 0.4s;
+}
+
+.home-btn-animation {
+	animation: home-btn-animation .2s;
 }
 
 

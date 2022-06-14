@@ -99,8 +99,10 @@ const handleHomeBtn = () => {
 			section.offsetTop <= currentSection
 		) {
 			homeBtn.classList.add('home-btn--active');
+			homeBtn.classList.add('home-btn-animation');
 		} else if (currentSection < 300) {
-			homeBtn.classList.remove('home-btn--active');
+			homeBtn.classList.remove('home-btn--active')
+			homeBtn.classList.remove('home-btn-animation');;
 		}
 	});
 };

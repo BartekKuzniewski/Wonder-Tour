@@ -88,26 +88,26 @@ html {
 // NAVIGATION
 
 .nav {
-	z-index: 100;
 	width: 100%;
 	background-color: $white;
 	border-bottom: 0.1em solid #d8d8d8;
+	z-index: 100;
 
 	&__mobile {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		position: relative;
 		height: 6.5em;
 		width: 100%;
 
 		&-btn {
-			font-size: 3rem;
 			padding: 0.5em;
 			background: none;
+			font-size: 3rem;
+			color: $secondary-color;
 			border: none;
 			cursor: pointer;
-			color: $secondary-color;
 		}
 
 		.container {
@@ -117,15 +117,15 @@ html {
 		}
 
 		&-menu {
-			position: absolute;
 			display: flex;
 			flex-direction: column;
-			background-color: $white;
+			position: absolute;
 			top: 6.5em;
 			left: 0;
 			height: calc(100vh - 6.5em);
-			transform: translateX(-100%);
+			background-color: $white;
 			box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+			transform: translateX(-100%);
 			transition: transform 0.6s;
 			z-index: 10;
 
@@ -134,12 +134,12 @@ html {
 			}
 
 			&-socials {
-				text-align: center;
 				margin: 1em 3em;
+				text-align: center;
 
 				&-item {
-					font-size: 1.8rem;
 					padding: 1em 0.5em;
+					font-size: 1.8rem;
 					color: $dark;
 					text-decoration: none;
 					transition: color 0.4s;
@@ -158,8 +158,8 @@ html {
 			}
 
 			&-item {
-				font-size: 1.8rem;
 				padding: 1em 7em 1.2em 1.5em;
+				font-size: 1.8rem;
 				color: $dark;
 				text-decoration: none;
 				cursor: pointer;
@@ -180,10 +180,10 @@ html {
 			top: 6.5em;
 			padding: 2.5em;
 			background-color: $white;
-			transform: translateY(10%);
+			box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
 			visibility: hidden;
 			opacity: 0;
-			box-shadow: 0 0 10px 0 rgb(0 0 0 / 10%);
+			transform: translateY(10%);
 			transition: visibility 0.3s, transform 0.3s, opacity 0.3s;
 			z-index: 10;
 
@@ -202,9 +202,9 @@ html {
 				}
 
 				i {
+					margin-right: 0.7em;
 					font-size: 1.8rem;
 					color: $main-color;
-					margin-right: 0.7em;
 				}
 			}
 
@@ -246,8 +246,8 @@ html {
 				}
 
 				.second-btn {
-					border: 0.12em solid $main-color;
 					padding: 0.7em 1.7em;
+					border: 0.12em solid $main-color;
 				}
 
 				p {
@@ -268,9 +268,9 @@ html {
 		}
 
 		&-menu {
-			z-index: 1000;
 			width: 100%;
 			background-color: $secondary-color;
+			z-index: 1000;
 
 			.wrapper {
 				display: flex;
@@ -283,8 +283,8 @@ html {
 
 			&-item {
 				position: relative;
-				font-size: 2rem;
 				padding: 1em;
+				font-size: 2rem;
 				color: $white;
 				text-decoration: none;
 				letter-spacing: 0.05em;
@@ -316,8 +316,8 @@ html {
 				margin-right: 1em;
 
 				&-item {
-					font-size: 2rem;
 					padding: 1em 0.5em;
+					font-size: 2rem;
 					color: $white;
 					text-decoration: none;
 					transition: color 0.4s;
@@ -347,9 +347,9 @@ html {
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: center;
+		padding: 1em;
 		height: calc(100vh - 6.5em);
 		color: $white;
-		padding: 1em;
 
 		&-text {
 			font-size: 1.8rem;
@@ -384,6 +384,7 @@ html {
 // TOUR
 .tours {
 	background-color: $light-gray;
+
 	&__cards {
 		display: flex;
 		flex-direction: column;
@@ -415,11 +416,11 @@ html {
 			position: absolute;
 			bottom: 1.5em;
 			left: 50%;
+			font-size: 2.6rem;
+			color: $white;
+			letter-spacing: 0.05em;
 			text-align: center;
 			transform: translateX(-50%);
-			color: $white;
-			font-size: 2.6rem;
-			letter-spacing: 0.05em;
 		}
 	}
 
@@ -428,14 +429,15 @@ html {
 		align-items: center;
 		justify-content: center;
 		margin-top: 2em;
-		color: $dark;
 		font-size: 1.6rem;
+		color: $dark;
 		font-weight: 700;
 		text-decoration: none;
 		transition: margin-left 0.3s;
 
 		&:hover {
 			margin-left: -1em;
+
 			.arrow-right::after {
 				width: 40px;
 			}
@@ -445,11 +447,11 @@ html {
 		}
 
 		.arrow-right {
+			display: inline-block;
+			position: relative;
 			width: 50px;
 			height: 50px;
 			margin-left: 1em;
-			display: inline-block;
-			position: relative;
 
 			&::before {
 				content: '';
@@ -519,8 +521,8 @@ html {
 
 	&__info {
 		&-heading {
-			text-align: center;
 			margin-bottom: 2em;
+			text-align: center;
 
 			h2 {
 				font-size: 2.4rem;
@@ -528,8 +530,8 @@ html {
 
 			.subpage-heading {
 				font-size: 3rem;
-				letter-spacing: 0.05em;
 				color: $gray;
+				letter-spacing: 0.05em;
 			}
 		}
 
@@ -549,9 +551,9 @@ html {
 				.about-item {
 					position: relative;
 					display: inline-block;
-					font-size: 1.6rem;
 					padding: 0.5em 1em;
 					margin-bottom: 0.5em;
+					font-size: 1.6rem;
 					color: $gray;
 					letter-spacing: 0.15em;
 					cursor: pointer;
@@ -593,10 +595,10 @@ html {
 				padding: 0 1em;
 
 				.text {
-					text-align: center;
-					font-size: 1.5rem;
 					margin: 1em 0;
+					font-size: 1.5rem;
 					line-height: 1.6em;
+					text-align: center;
 					opacity: 0.8;
 
 					&--subpage {
@@ -635,9 +637,9 @@ html {
 					text-align: left;
 
 					&__title {
-						letter-spacing: 0.075em;
 						margin-bottom: 0.5em;
 						color: $gray;
+						letter-spacing: 0.075em;
 					}
 
 					&__bar {
@@ -666,11 +668,11 @@ html {
 
 						&-value {
 							position: absolute;
-							letter-spacing: 0.075em;
-							color: $gray;
 							bottom: 100%;
 							right: -4px;
 							margin-bottom: 0.5em;
+							color: $gray;
+							letter-spacing: 0.075em;
 							transform: translate3d(50%, 0, 0);
 						}
 
@@ -683,8 +685,8 @@ html {
 							height: 1.3em;
 							border: 0.35em solid $white;
 							border-radius: 50%;
-							transform: translate(50%, -50%);
 							box-shadow: 0 0 2px 3px rgb(0 0 0 / 10%);
+							transform: translate(50%, -50%);
 
 							&--first {
 								background-color: #50ba87;
@@ -710,9 +712,9 @@ html {
 					margin: 2em 0;
 
 					&__text {
-						text-align: center;
 						margin: 1em 0;
 						font-size: 1.4rem;
+						text-align: center;
 					}
 				}
 			}
@@ -808,7 +810,6 @@ html {
 			&-place {
 				margin: 1em 0 0.7em 0;
 				font-size: 2rem;
-				// font-weight: normal;
 				color: $dark;
 			}
 
@@ -833,11 +834,11 @@ html {
 			}
 
 			&-text {
-				color: $gray;
 				font-size: 1.5rem;
+				margin: 1.2em 0;
+				color: $gray;
 				line-height: 1.7em;
 				opacity: 0.7;
-				margin: 1.2em 0;
 			}
 		}
 	}
@@ -846,15 +847,16 @@ html {
 // HERO-IMG
 .hero-img {
 	position: relative;
-	padding: 6em 2em;
 	background-image: url('../img/hero-img.jpg');
 	background-position: 45% 1%;
 	background-size: cover;
 	background-attachment: fixed;
+	padding: 6em 2em;
 	text-align: center;
 	z-index: 0;
 
 	&::before {
+		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -862,14 +864,13 @@ html {
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.5);
 		z-index: -1;
-		content: '';
 	}
 
 	&__tittle {
 		font-size: 2.6rem;
-		line-height: 1.5em;
-		font-weight: normal;
 		color: $white;
+		font-weight: normal;
+		line-height: 1.5em;
 
 		span {
 			font-size: 3rem;
@@ -881,8 +882,8 @@ html {
 		margin-top: 1.5em;
 		margin-bottom: 4em;
 		font-size: 1.6rem;
-		line-height: 1.6em;
 		color: $white;
+		line-height: 1.6em;
 		letter-spacing: 0.1em;
 	}
 
@@ -905,8 +906,8 @@ html {
 	&__box {
 		background-color: $white;
 		margin: 5em 0 6em 0;
-		text-align: center;
 		padding: 1em 2em;
+		text-align: center;
 		filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.15));
 
 		&-figure {
@@ -914,24 +915,24 @@ html {
 			margin-bottom: 1em;
 
 			img {
-				border-radius: 50%;
 				border: 1.5em solid $white;
+				border-radius: 50%;
 			}
 		}
 
 		&-text {
+			margin-bottom: 1em;
 			font-size: 1.5rem;
 			color: $dark;
 			line-height: 1.6em;
-			margin-bottom: 1em;
 			letter-spacing: 0.025em;
 		}
 
 		&-name {
-			font-size: 1.9rem;
 			margin-bottom: 0.8em;
-			font-weight: normal;
+			font-size: 1.9rem;
 			color: $main-color;
+			font-weight: normal;
 		}
 	}
 }
@@ -951,22 +952,22 @@ html {
 		width: 100%;
 		max-width: 340px;
 		height: 270px;
-		background-image: url('../img/achievement-img.jpg');
 		margin-bottom: 4em;
+		background-image: url('../img/achievement-img.jpg');
 
 		&-content {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 			position: absolute;
 			width: 90%;
 			height: 90%;
 			top: 50%;
 			left: 50%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			transform: translate(-50%, -50%);
-			background-color: white;
 			padding: 1em;
+			background-color: white;
+			transform: translate(-50%, -50%);
 
 			&-number {
 				font-size: 4.6rem;
@@ -998,9 +999,9 @@ html {
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.5);
 		z-index: -1;
-		content: '';
 	}
-
+	
+	content: '';
 	&__content {
 		display: flex;
 		flex-direction: column;
@@ -1031,12 +1032,12 @@ html {
 			max-width: 480px;
 
 			input {
-				width: 100%;
 				padding: 1.5em 1em;
+				margin-bottom: 1em;
+				width: 100%;
 				font-size: 1.5rem;
 				background: rgba(255, 255, 255, 0.34);
 				border-color: transparent;
-				margin-bottom: 1em;
 
 				&::placeholder {
 					color: $white;
@@ -1066,27 +1067,27 @@ html {
 	}
 
 	&__heading {
-		text-align: center;
-		font-size: 2rem;
-		letter-spacing: 0.01em;
 		margin-bottom: 1.5em;
+		font-size: 2rem;
+		text-align: center;
+		letter-spacing: 0.01em;
 	}
 
 	&__socials {
-		text-align: center;
 		margin-bottom: 3em;
+		text-align: center;
 
 		h3 {
+			margin-bottom: 0.5em;
 			font-size: 2.6em;
 			letter-spacing: 0.02em;
-			margin-bottom: 0.5em;
 			color: $white;
 		}
 
 		a {
+			color: $white;
 			text-decoration: none;
 			transition: color 0.3s;
-			color: $white;
 
 			&:hover {
 				color: $main-color;
@@ -1118,8 +1119,8 @@ html {
 			p {
 				font-size: 1.5rem;
 				margin-bottom: 1.6em;
-				transition: color 0.3s;
 				cursor: pointer;
+				transition: color 0.3s;
 
 				&:hover {
 					color: $main-color;
@@ -1144,24 +1145,24 @@ html {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			gap: 1em;
 			flex-wrap: wrap;
-			list-style: none;
+			gap: 1em;
 			margin-bottom: 2em;
+			list-style: none;
 
 			li {
 				position: relative;
 				margin-bottom: 1em;
-				// padding: 1em;
+
 				&::before {
-					position: absolute;
 					content: '';
+					position: absolute;
 					width: 0.7em;
 					height: 0.7em;
-					border-radius: 50%;
 					top: 0.6em;
 					left: -0.6 em;
 					background-color: $main-color;
+					border-radius: 50%;
 				}
 			}
 		}
@@ -1198,14 +1199,15 @@ html {
 
 .subpage-header {
 	position: relative;
-	margin: -0.1em;
 	background-image: url('../img/subheader-small.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 1%;
+	margin: -0.1em;
 	z-index: 0;
 
 	&::before {
+		content: '';
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -1213,15 +1215,14 @@ html {
 		height: 100%;
 		background-color: rgba(0, 0, 0, 0.3);
 		z-index: -1;
-		content: '';
 	}
 
 	&__box {
-		padding: 7em 5em;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		padding: 7em 5em;
 		color: $white;
 	}
 
@@ -1244,8 +1245,8 @@ html {
 		a {
 			position: relative;
 			color: $white;
-			cursor: pointer;
 			text-decoration: none;
+			cursor: pointer;
 			transition: text-decoration 0.4s;
 
 			&:hover {
@@ -1346,10 +1347,10 @@ html {
 		margin-bottom: 5em;
 
 		&__text {
+			padding-top: 1em;
 			font-size: 1.6rem;
 			text-align: center;
 			letter-spacing: 0.03em;
-			padding-top: 1em;
 			border-top: 0.1em solid $gray;
 		}
 
@@ -1375,8 +1376,8 @@ html {
 		font-size: 1.6rem;
 		margin-bottom: 2em;
 		padding: 0.5em 1em;
-		border: none;
 		background-color: $light-gray;
+		border: none;
 	}
 
 	&__form-textarea {
@@ -1428,8 +1429,8 @@ html {
 					padding: 0 2em;
 
 					.text {
-						font-size: 1.6rem;
 						margin-bottom: 2em;
+						font-size: 1.6rem;
 						line-height: 1.6em;
 						opacity: 0.8;
 					}
@@ -1572,8 +1573,8 @@ html {
 
 	.hot-tours {
 		&__cards {
-			padding: 0em 2em;
 			flex-direction: column;
+			padding: 0em 2em;
 		}
 
 		&__card {
@@ -1591,14 +1592,15 @@ html {
 
 			&-img {
 				flex: 1;
+
 				img {
 					height: 100%;
 				}
 			}
 
 			&-info {
-				padding: 3em;
 				flex: 1;
+				padding: 3em;
 
 				&-place {
 					margin-top: 0;
@@ -1682,7 +1684,6 @@ html {
 
 	.get-in-touch {
 		.heading {
-			// padding: 1em;
 			flex-direction: row;
 			gap: 2em;
 
@@ -1696,11 +1697,11 @@ html {
 			}
 
 			.section-heading {
-				letter-spacing: 0;
 				margin-bottom: 0;
-				text-transform: none;
-				font-weight: 700;
 				flex: 1;
+				font-weight: 700;
+				letter-spacing: 0;
+				text-transform: none;
 			}
 		}
 
@@ -1793,15 +1794,15 @@ html {
 					padding: 0;
 
 					.about-items {
-						width: 100%;
 						display: flex;
 						justify-content: center;
 						align-items: center;
+						width: 100%;
 					}
 
 					.about-item {
-						font-size: 1.7rem;
 						padding: 0.5em;
+						font-size: 1.7rem;
 						letter-spacing: 0.07em;
 						border-top: none;
 					}
@@ -1944,8 +1945,8 @@ html {
 
 		&__links {
 			flex: 1;
-			align-items: flex-start;
 			padding: 0em 4em;
+			align-items: flex-start;
 
 			ul {
 				justify-content: flex-start;
@@ -1984,8 +1985,8 @@ html {
 		&__info-content {
 			&-headings {
 				.about-item {
-					font-size: 1.8rem;
 					padding: 0.5em 1em;
+					font-size: 1.8rem;
 					letter-spacing: 0.1em;
 				}
 			}

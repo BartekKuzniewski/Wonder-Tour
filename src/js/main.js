@@ -1,3 +1,4 @@
+//nav
 const desktopNav = document.querySelector('.nav__desktop-menu');
 //about-us
 const aboutUs = document.querySelector('.about-item--first');
@@ -68,7 +69,6 @@ function handleNav() {
 	navInfoBtn.addEventListener('click', toggleNavInfo);
 }
 handleNav();
-///
 
 const addNavPosition = () => {
 	const navPosition = desktopNav.offsetTop;
@@ -108,6 +108,15 @@ const handleHomeBtn = () => {
 window.addEventListener('scroll', handleHomeBtn);
 window.addEventListener('scroll', addNavPosition);
 window.addEventListener('scroll', removeNavPosition);
+
+//footer
+const handleCurrentYear = () => {
+	const year = new Date().getFullYear();
+	footerYear.innerText = year;
+};
+
+handleCurrentYear();
+
 //about-us
 
 aboutUs.addEventListener('click', () => {
@@ -170,10 +179,3 @@ const startCounter = (entry) => {
 const observer = new IntersectionObserver(startCounter, options);
 observer.observe(counterBox);
 
-//footer
-const handleCurrentYear = () => {
-	const year = new Date().getFullYear();
-	footerYear.innerText = year;
-};
-
-handleCurrentYear();

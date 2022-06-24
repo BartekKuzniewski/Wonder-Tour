@@ -1,5 +1,6 @@
 @use 'colors.scss' as *;
 @use 'components.scss' as *;
+@use 'mixins.scss' as *;
 
 *,
 *::before,
@@ -31,20 +32,20 @@ html {
 .home-btn {
 	display: none;
 	position: fixed;
-    right: 15px;
-    bottom: 15px;
-    width: 45px;
-    height: 45px;
-    font-size: 22px;
-    line-height: 45px;
-    color: #ffffff;
-    background: #01b3a7;
-    overflow: hidden;
-    text-align: center;
-    text-decoration: none;
-    z-index: 100;
+	right: 15px;
+	bottom: 15px;
+	width: 45px;
+	height: 45px;
+	font-size: 22px;
+	line-height: 45px;
+	color: #ffffff;
+	background: #01b3a7;
+	overflow: hidden;
+	text-align: center;
+	text-decoration: none;
+	z-index: 100;
 	cursor: pointer;
-	transition: background-color .3s;
+	transition: background-color 0.3s;
 
 	&:hover {
 		background-color: $dark;
@@ -80,10 +81,8 @@ html {
 }
 
 .home-btn-animation {
-	animation: home-btn-animation .2s;
+	animation: home-btn-animation 0.2s;
 }
-
-
 
 // NAVIGATION
 
@@ -111,9 +110,7 @@ html {
 		}
 
 		.container {
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			@include flexRowCenter;
 		}
 
 		&-menu {
@@ -237,9 +234,7 @@ html {
 			}
 
 			&-info {
-				display: flex;
-				align-items: center;
-				justify-content: center;
+				@include flexRowCenter;
 
 				&-time {
 					border-right: 0.1em solid #d8d8d8;
@@ -386,10 +381,7 @@ html {
 	background-color: $light-gray;
 
 	&__cards {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 	}
 
 	&__card {
@@ -425,9 +417,7 @@ html {
 	}
 
 	&__others {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include flexRowCenter;
 		margin-top: 2em;
 		font-size: 1.6rem;
 		color: $dark;
@@ -501,10 +491,7 @@ html {
 
 .about {
 	&__content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 	}
 
 	&__img {
@@ -537,9 +524,7 @@ html {
 
 		&-content {
 			&-headings {
-				display: flex;
-				align-items: center;
-				justify-content: center;
+				@include flexRowCenter;
 				padding: 0 4em;
 
 				.about-items {
@@ -606,10 +591,7 @@ html {
 					}
 				}
 				.buttons {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
+					@include flexColumnCenter;
 				}
 				&--first {
 					display: none;
@@ -704,10 +686,7 @@ html {
 				}
 
 				.skills {
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
+					@include flexColumnCenter;
 					gap: 2em;
 					margin: 2em 0;
 
@@ -725,10 +704,7 @@ html {
 // SERVICES
 .services {
 	&__cards {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 	}
 
 	&__card {
@@ -762,10 +738,7 @@ html {
 // HOT-TOURS
 .hot-tours {
 	&__cards {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 	}
 
 	&__card {
@@ -897,10 +870,7 @@ html {
 	background-color: $light-gray;
 
 	&__container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 	}
 
 	&__box {
@@ -940,10 +910,7 @@ html {
 // ACHIEVEMENTS
 .achievements {
 	&__cards {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 		width: 100%;
 	}
 	&__card {
@@ -956,10 +923,7 @@ html {
 		background-image: url('../img/achievement-img.jpg');
 
 		&-content {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
+			@include flexColumnCenter;
 			position: absolute;
 			width: 90%;
 			height: 90%;
@@ -1000,13 +964,10 @@ html {
 		background-color: rgba(0, 0, 0, 0.5);
 		z-index: -1;
 	}
-	
+
 	content: '';
 	&__content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 		color: $white;
 		text-align: center;
 		padding: 2em 0;
@@ -1024,10 +985,7 @@ html {
 		}
 
 		&-form {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
+			@include flexColumnCenter;
 			width: 100%;
 			max-width: 480px;
 
@@ -1059,10 +1017,7 @@ html {
 	color: $white;
 
 	&__container {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 		padding: 2em;
 	}
 
@@ -1110,10 +1065,7 @@ html {
 		}
 
 		&-box {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
+			@include flexColumnCenter;
 			padding: 1em 3em;
 
 			p {
@@ -1136,15 +1088,10 @@ html {
 	}
 
 	&__links {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 
 		ul {
-			display: flex;
-			align-items: center;
-			justify-content: center;
+			@include flexRowCenter;
 			flex-wrap: wrap;
 			gap: 1em;
 			margin-bottom: 2em;
@@ -1218,10 +1165,7 @@ html {
 	}
 
 	&__box {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 		padding: 7em 5em;
 		color: $white;
 	}
@@ -1233,9 +1177,7 @@ html {
 	}
 
 	&__paths {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		@include flexRowCenter;
 		font-size: 1.5rem;
 		font-weight: 700;
 		letter-spacing: 0.05em;
@@ -1278,10 +1220,7 @@ html {
 	background-color: $light-gray;
 
 	&__cards {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 	}
 
 	&__card {
@@ -1340,10 +1279,7 @@ html {
 
 .get-in-touch {
 	.heading {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
+		@include flexColumnCenter;
 		margin-bottom: 5em;
 
 		&__text {
@@ -1715,7 +1651,6 @@ html {
 }
 
 @media (min-width: 992px) {
-
 	.home-btn {
 		right: 25px;
 		bottom: 25px;
@@ -1794,9 +1729,7 @@ html {
 					padding: 0;
 
 					.about-items {
-						display: flex;
-						justify-content: center;
-						align-items: center;
+						@include flexRowCenter;
 						width: 100%;
 					}
 
